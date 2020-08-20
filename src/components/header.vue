@@ -1,7 +1,9 @@
 <template lang="pug">
-    header.d-flex
-        .title Магазин книг
-        AppCart
+    header.header
+        .container
+            .header__wrap.border.rounded.shadow-sm
+                .header__title.border-right Магазин книг
+                AppCart
 
 
 </template>
@@ -10,13 +12,21 @@
     import AppCart from './cart.vue'
 
 export default {
-  name: 'header',
+  name: 'cart',
   components: {
       AppCart
   }
 }
 </script>
 
-<style>
-
+<style lang="scss">
+    .header {
+       &__wrap {
+           display: flex;
+           justify-content: space-between;
+       }
+        &__title {
+            padding: 10px;
+        }
+    }
 </style>

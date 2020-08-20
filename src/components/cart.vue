@@ -1,7 +1,7 @@
 <template lang="pug">
-    div
-        .sum итого
-        .sum корзина
+    .cart
+        .cart__info.border-left Итого: 0 руб
+        .cart__info.border-left корзина (0)
 
 </template>
 
@@ -13,6 +13,12 @@
     }
 </script>
 
-<style>
-
+<style lang="scss">
+    .cart {
+        display: flex;
+        align-items: center;
+        &__info {
+            padding: 10px;
+        }
+    }
 </style>
