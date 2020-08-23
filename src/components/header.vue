@@ -5,14 +5,13 @@
                 .header__title.border-right Магазин книг
                 AppCart
 
-
 </template>
 
 <script>
     import AppCart from './cart.vue'
 
 export default {
-  name: 'cart',
+  name: 'header',
   components: {
       AppCart
   }

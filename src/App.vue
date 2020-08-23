@@ -1,7 +1,6 @@
 <template lang="pug">
   #app
 
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
       AppHeader
       AppContent
 
@@ -20,11 +19,17 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" >
+    @import 'node_modules/bootstrap/scss/bootstrap';
+    @import 'node_modules/bootstrap-vue/src/index.scss';
+    @import "src/styles/mixin";
+    @import "src/styles/constans";
+
     .container {
         max-width: 1400px;
         margin: auto;
         padding: 20px;
+
     }
 
 </style>

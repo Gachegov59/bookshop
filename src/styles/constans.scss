@@ -1,0 +1,28 @@
+$base-font-size: 14px;
+
+//Разрешения экранов
+$phone-width: 320px;
+$smart-width: 600px;
+$tablet-width: 768px;
+$small-desktop-width: 1024px;
+$desktop-width: 1280px;
+$wide-desktop-width : 1600px;
+
+$grid-gutter-width: 30px;
+$grid-breakpoints: (
+        xs: 0,
+        sm: $tablet-width,
+        md: $small-desktop-width,
+        lg: $desktop-width,
+        xl: $wide-desktop-width
+);
+
+$container-max-widths: (
+        sm: 9999px,
+        md: 9999px,
+        lg: 9999px,
+        xl: 1400px
+);
+
+
+//Цвета

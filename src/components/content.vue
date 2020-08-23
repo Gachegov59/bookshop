@@ -1,6 +1,6 @@
 <template lang="pug">
     main
-        .container.pb-0
+        .container.py-0
             AppFilters
         .container
             .cards
@@ -13,6 +13,7 @@
     import icons from './experiments/icons'
 
     export default {
+        name: 'content',
         components: {
             AppItem,
             AppFilters,
