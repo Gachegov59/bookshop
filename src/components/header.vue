@@ -11,7 +11,6 @@
     import AppCart from './cart.vue'
 
 export default {
-  name: 'header',
   components: {
       AppCart
   }

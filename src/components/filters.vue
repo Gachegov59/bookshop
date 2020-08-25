@@ -47,6 +47,9 @@
         padding: 0;
         margin: 10px 0;
         list-style-type: none;
+        li {
+            padding-right: 5px;
+        }
     }
     &__search {
         /*margin-left: 20px;*/

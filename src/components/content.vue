@@ -4,20 +4,49 @@
             AppFilters
         .container
             .cards
-                AppItem
+                .row
+                    AppCard(v-for="(item, i) in PRODUCTS"
+                        :key="i"
+                        :card_data="item"
+                        @sendPrice="showConsole")
 </template>
 
 <script>
-    import AppItem from './item.vue'
+    import AppCard from './card'
     import AppFilters from './filters.vue'
     import icons from './experiments/icons'
-
+    import {mapActions, mapGetters} from 'vuex'
     export default {
-        name: 'content',
+        data() {
+            return {
+                // items: null
+            }
+        },
         components: {
-            AppItem,
+            AppCard,
             AppFilters,
             icons
+        },
+        computed: {
+            ...mapGetters([
+                'PRODUCTS'
+            ])
+        },
+        methods: {
+            ...mapActions([
+                'GET_PRODUCTS_FROM_API'
+            ]),
+            showConsole(data){
+                console.log(data)
+            }
+        },
+        mounted() {
+           this.GET_PRODUCTS_FROM_API()
+            .then((response) =>{
+                if(response.data){
+                    console.log('data kek')
+                }
+            })
         }
     }
 
@@ -25,6 +54,7 @@
 
 
 
-<style>
-
+<style lang="scss">
+.cards{
+}
 </style>
