@@ -6,11 +6,23 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        products: []
+        products: [],
+        cart: 0,
+        cnt: 0
     },
     mutations: {
         SET_PRODUCTS_TO_STATE: (state, products) => {
             state.products = products
+        },
+        ADD_TO_CART:(state, price) => {
+            state.cart += price
+            state.cnt++
+        },
+        REMOVE_FROM_CART:(state, price) => {
+            if(state.cnt > 0) {
+                state.cart -= price
+                state.cnt--
+            }
         }
     },
     actions: {
@@ -31,6 +43,12 @@ export default new Vuex.Store({
     getters: {
         PRODUCTS(state) {
             return state.products
+        },
+        CART(state) {
+            return state.cart
+        },
+        CNT(state) {
+            return state.cnt
         }
     }
 })

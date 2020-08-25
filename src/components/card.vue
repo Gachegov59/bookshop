@@ -1,62 +1,54 @@
 <template lang="pug">
-         .col-6.col-sm-4.col-lg-3
-            .card.shadow-sm
-                img( :src="card_data.image" )
-                .card__content
-                    .card__title.bold(:title="card_data.title") {{ card_data.title }}
-                    .card__author(:title="card_data.author") {{ card_data.author }}
-                .card__price
-                    fa-icon(icon="ruble-sign"  style="color:grey" ).mr-1
-                    .fa.fa-rub {{ card_data.price }}
-                button.card__button.btn.btn-light(@click="sendPrice") Добавить в корзину
+    .col-6.col-sm-4.col-lg-3
+        .card.shadow-sm
+            img( :src="card_data.image" )
+            .card__content
+                .card__title.bold(:title="card_data.title") {{ card_data.title }}
+                .card__author(:title="card_data.author") {{ card_data.author }}
+            .card__price
+                fa-icon(icon="ruble-sign"  style="color:grey" ).mr-1
+                .fa.fa-rub {{ card_data.price }}
+            .card__button-wrap
+                button.card__button.btn.btn-light(@click="addCard" ) Добавить в корзину {{ num }}
+                fa-icon(icon="minus" style="color:red" @click="removeCard" ).card__button-icon
 
 </template>
 
 <script>
-    // import axios from 'axios';
-
     export default {
         name: 'item',
         data() {
             return {
+                num: null
             }
         },
         components: {},
         props: {
-            card_data:{
-                type:Object,
-                default(){
-                    return{}
+            card_data: {
+                type: Object,
+                default() {
+                    return {}
                 }
             }
         },
         computed: {},
         methods: {
-            sendPrice() {
-                this.$emit('sendPrice', this.card_data.price)
-            }
+            addCard() {
+                this.$store.commit('ADD_TO_CART', this.card_data.price)
+                this.num++
+            },
+            removeCard() {
+                this.$store.commit('REMOVE_FROM_CART', this.card_data.price)
+                this.num <= 1 ? this.num = null : this.num-- ;
+            },
         }
-        // mounted() {
-        //
-        //     axios
-        //         .get('../ajax/data.json')
-        //         .then(response => {
-        //             this.items = response.data
-        //             console.log(response.data)
-        //             console.log('price',response.data[0].price)
-        //             console.log('тип', typeof(response.data) )
-        //         });
-        //
-        // }
+
     }
 </script>
 
-
 <style lang="scss" scoped>
-
     .card {
-        margin: 0 10px 20px ;
-        /*flex-basis: 23%;*/
+        margin: 0 10px 20px;
 
         img {
             height: 350px;
@@ -78,6 +70,7 @@
             align-items: center;
             padding: 10px 20px;
         }
+
         &__title {
             white-space: nowrap;
             text-overflow: ellipsis;
@@ -88,6 +81,30 @@
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
+        }
+
+        &__button {
+            padding: 10px 25px;
+            position: relative;
+            width: 100%;
+            &-wrap {
+                position: relative;
+            }
+            &-icon {
+                position: absolute;
+                z-index: 9999;
+                left: 15px;
+                top: 50%;
+                transform: translate(0, -50%);
+                cursor: pointer;
+                &:hover {
+                    transition: all .3s ease;
+                    transform: translate(0, -50%) scale(1.5);
+                }
+            }
+            /*&-icon-2 {*/
+            /*    content: 'f068';*/ //todo:решить добовление иконок классом
+            /*}*/
         }
     }
 </style>

@@ -1,14 +1,27 @@
 <template lang="pug">
     .cart
-        .cart__info.border-left Итого: 0 руб
-        .cart__info.border-left корзина (0)
+        .cart__info.border-left Итого: {{CART}} руб
+        .cart__info.border-left корзина ({{CNT}})
 
 </template>
 
 <script>
+    import {mapGetters, mapActions} from 'vuex'
+
     export default {
         name: 'cart',
         components: {
+        },
+        computed:{
+            ...mapGetters([
+                'CART',
+                'CNT'
+            ])
+        },
+        methods:{
+            ...mapActions([
+
+            ])
         }
     }
 </script>
