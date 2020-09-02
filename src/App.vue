@@ -1,6 +1,5 @@
 <template lang="pug">
   #app
-
       AppHeader
       AppContent
 
@@ -20,10 +19,7 @@ export default {
 </script>
 
 <style lang="scss" >
-    @import 'node_modules/bootstrap/scss/bootstrap';
-    @import 'node_modules/bootstrap-vue/src/index.scss';
-    @import "src/styles/mixin";
-    @import "src/styles/constans";
+    @import "src/styles/styles";
 
     .container {
         max-width: 1400px;

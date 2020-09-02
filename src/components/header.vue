@@ -3,17 +3,23 @@
         .container
             .header__wrap.border.rounded.shadow-sm
                 .header__title.border-right Магазин книг
-                AppCart
+                AppCart(:cart_data="CART_ARR")
 
 </template>
 
 <script>
     import AppCart from './cart.vue'
+    import {mapGetters} from "vuex";
 
 export default {
   components: {
       AppCart
-  }
+  },
+    computed:{
+        ...mapGetters([
+            'CART_ARR'
+        ])
+    }
 }
 </script>
 

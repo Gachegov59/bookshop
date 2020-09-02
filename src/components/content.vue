@@ -3,29 +3,27 @@
         .container.py-0
             AppFilters
         .container
-            .cards
+            .items
                 .row
-                    AppCard(v-for="(item, i) in PRODUCTS"
+                    AppBook(v-for="(item, i) in PRODUCTS"
                         :key="i"
-                        :card_data="item"
-                        @sendPrice="showConsole")
+                        :book_data="item"
+                        @addBook="addBook"
+                        @removeBook="removeBook" )
 </template>
 
 <script>
-    import AppCard from './card'
+    import AppBook from './book'
     import AppFilters from './filters.vue'
-    import icons from './experiments/icons'
     import {mapActions, mapGetters} from 'vuex'
     export default {
         data() {
             return {
-                // items: null
             }
         },
         components: {
-            AppCard,
-            AppFilters,
-            icons
+            AppBook,
+            AppFilters
         },
         computed: {
             ...mapGetters([
@@ -34,17 +32,22 @@
         },
         methods: {
             ...mapActions([
-                'GET_PRODUCTS_FROM_API'
+                'GET_PRODUCTS_FROM_API',
+                'ADD_BOOK',
+                'REMOVE_BOOK'
             ]),
-            showConsole(data){
-                console.log(data)
+            addBook(data, i){
+                this.ADD_BOOK(data,i)
+            },
+            removeBook(data){
+                this.REMOVE_BOOK(data)
             }
         },
         mounted() {
-           this.GET_PRODUCTS_FROM_API()
+           this.GET_PRODUCTS_FROM_API() // Получаем данные для распакаовки v-for
             .then((response) =>{
                 if(response.data){
-                    console.log('data kek')
+                    console.log('data пришла')
                 }
             })
         }
@@ -52,9 +55,6 @@
 
 </script>
 
-
-
 <style lang="scss">
-.cards{
-}
+
 </style>
