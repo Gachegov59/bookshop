@@ -1,6 +1,6 @@
 <template lang="pug">
     .col-6.col-sm-4.col-lg-3
-        .card(:class="{_active: num != null}")
+        .card(:class="{_active: num != null}" :key="book_data.id")
             img( :src="book_data.image" )
             .card__content
                 .card__title.bold(:title="book_data.title") {{ book_data.title }}
@@ -41,7 +41,8 @@
                 // this.num++
             },
             removeInCart() { // Убираем из карзины - стчетчик на карте
-                this.$emit('removeBook',this.book_data) // отправка в родителя -> content
+                this.$emit('removeBook',this.book_data, this.book_data.id) // отправка в родителя -> content
+                // console.log('this.book_data.id', this.book_data.id)
                 // this.num <= 1 ? this.num = null : this.num-- ;
             },
         }

@@ -1,6 +1,6 @@
 <template lang="pug">
 
-    .cart__popup-item
+    .cart__popup-item(:key="cart_item.id")
         img( :src="cart_item.image")
         .cart__popup-content
             .cart__popup-title  {{cart_item.title}}
@@ -12,7 +12,6 @@
                     @click="removeInCart"
                     icon="minus"
                 )
-            div {{log}}}
 
 </template>
 
@@ -34,13 +33,17 @@
             }
         },
         computed: {
-            log() {
-                return console.log('log', this.$store.state.products)
+            logStateProducts() {
+                return console.log('state.products', this.$store.state.products)
+            },
+            logStateCartArr() {
+                return console.log('state.artArr', this.$store.state.cartArr)
             }
         },
         methods: {
             removeInCart() { // Убираем из карзины - стчетчик на карте
-                this.$emit('removeBook', this.cart_item) // отправка в родителя -> content
+                this.$emit('removeBook', this.cart_item, this.cart_item.id ) // отправка в родителя -> content
+                console.log(this.cart_item.id)
             },
         },
         mounted() {

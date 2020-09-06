@@ -8,7 +8,7 @@
             cartPopupItem(v-for="(item, i) in cart_data"
                 :key="i"
                 :cart_item="item"
-                @removeBook="removeBook(i)" )
+                @removeBook="removeBook" )
 
 
 
@@ -48,9 +48,9 @@
                 'ADD_BOOK',
                 'REMOVE_BOOK'
             ]),
-            removeBook(i) {
-                this.REMOVE_BOOK(i)
-                console.log(i)
+            removeBook(data, i) {
+                this.REMOVE_BOOK(data, i)
+                console.log('REMOVE_BOOK(i)',i)
             }
         }
     }
