@@ -1,11 +1,11 @@
 <template lang="pug">
     main
         .container.py-0
-            AppFilters
+            filters
         .container
             .items
                 .row
-                    AppBook(v-for="(item, i) in PRODUCTS"
+                    book(v-for="(item, i) in PRODUCTS"
                         :key="i"
                         :book_data="item"
                         @addBook="addBook"
@@ -13,8 +13,8 @@
 </template>
 
 <script>
-    import AppBook from './book'
-    import AppFilters from './filters.vue'
+    import book from './book'
+    import filters from './filters.vue'
     import {mapActions, mapGetters} from 'vuex'
     // import firebase from "firebase";
     // import  db from "../vuex/db"
@@ -25,8 +25,8 @@
             }
         },
         components: {
-            AppBook,
-            AppFilters
+            book,
+            filters
         },
         computed: {
             ...mapGetters([

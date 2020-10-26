@@ -9,11 +9,12 @@
                 fa-icon(icon="ruble-sign"  style="color:grey" ).mr-1
                 .fa.fa-rub {{ book_data.price }}
             .card__button-wrap
-                button.card__button.btn.btn-light(@click="addInCart" ) Добавить в корзину {{book_data.quantity}}
+                button.card__button.btn.btn-light(@click="addInCart" ) В корзину  <span v-if='book_data.quantity>0' >- {{book_data.quantity}} шт.</span>
                 fa-icon.card__button-icon(
+
                     @click="removeInCart"
                     icon="minus"
-                    v-if="num != null")
+                    v-if="book_data.quantity")
 
 </template>
 
@@ -109,12 +110,17 @@
                 top: 50%;
                 transform: translate(0, -50%);
                 cursor: pointer;
+                height: 100%;
+                width: 20px;
                 path {
                     fill: red;
                 }
                 &:hover {
                     transition: all .3s ease;
                     transform: translate(0, -50%) scale(1.5);
+                }
+                svg {
+                    height: 100%;
                 }
             }
             /*&-icon-2 {*/

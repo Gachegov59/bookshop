@@ -7,7 +7,7 @@
             .cart__popup-author  {{cart_item.author}}
             fa-icon(icon="ruble-sign"  style="color:grey" )
             .cart__popup-price  {{cart_item.price}}
-            .cart__popup-price  -  {{cart_item.quantity}}
+            .cart__popup-price <span v-show='cart_item.quantity>0' > - {{cart_item.quantity}} шт.</span>
                 fa-icon.cart__popup-delete(
                     @click="removeInCart"
                     icon="minus"
@@ -43,7 +43,7 @@
         methods: {
             removeInCart() { // Убираем из карзины - стчетчик на карте
                 this.$emit('removeBook', this.cart_item, this.cart_item.id ) // отправка в родителя -> content
-                console.log(this.cart_item.id)
+                console.log('this.cart_item.id', this.cart_item.id)
             },
         },
         mounted() {
