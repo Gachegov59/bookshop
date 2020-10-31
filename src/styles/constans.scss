@@ -11,7 +11,7 @@ $wide-desktop-width : 1600px;
 $grid-gutter-width: 30px;
 $grid-breakpoints: (
         xs: 0,
-        sm: $tablet-width,
+        sm: $smart-width,
         md: $small-desktop-width,
         lg: $desktop-width,
         xl: $wide-desktop-width
@@ -26,3 +26,5 @@ $container-max-widths: (
 
 
 //Цвета
+$accent: #fd8087;
+$base: #6bd9e7;

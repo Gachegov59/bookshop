@@ -1,9 +1,9 @@
 <template lang="pug">
     .filters
         ul.filters__list
-            li: button(checked).btn.btn-primary Все
-            li(:title="low"): button.btn.btn-btn-light Цена: #[fa-icon(icon="long-arrow-alt-down" )]
-            li(:title="high"): button.btn.btn-btn-light Цена: #[fa-icon(icon="long-arrow-alt-up")]
+            li(:title="all" @click="sort('all')"): button.btn.btn-primary Все
+            li(:title="low" @click="sort('low')"): button.btn.btn-btn-light Цена: #[fa-icon(icon="long-arrow-alt-down" )]
+            li(:title="high" @click="sort('high')"): button.btn.btn-btn-light Цена: #[fa-icon(icon="long-arrow-alt-up")]
             li: button.btn.btn-btn-light Автор
 
         .filters__search
@@ -25,10 +25,16 @@
             return{
                 low:'дешевле',
                 high:'дороже',
+                all:'всe',
             }
         },
         components: {
 
+        },
+        methods: {
+            sort(e) {
+                this.$emit('sort', e)
+            }
         }
     }
 

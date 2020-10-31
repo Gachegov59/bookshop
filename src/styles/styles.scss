@@ -3,3 +3,16 @@
 
 @import "constans.scss";
 @import "mixin.scss";
+
+html {
+  font-size: 10px;
+  color: white;
+  @include tablet {
+    font-size: 12px;
+  }
+}
+
+.container {
+  padding: 0 15px !important;
+}
+

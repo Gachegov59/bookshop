@@ -1,15 +1,16 @@
 <template lang="pug">
-    .cart
-        .cart__info.border-left Итого:  {{this.sum }} руб
-        .cart__info.border-left корзина ({{getSumm()}} {{this.quantity }})
 
-        .cart__popup(v-if="cart_data.length")
-            h4 покупка
-            cartPopupItem(v-for="(item, i) in cart_data"
+    .cart
+        fa-layer.cart__basket
+            fa-icon(icon="shopping-cart" @click="openCard")
+            span(v-if="cart_data.length") {{this.quantity}}  {{getSumm()}}
+
+        .cart__popup(:class="{_isOpen: cardOpen}")
+            h4(v-if="cart_data.length") Итог: {{this.sum}} руб.
+            cartPopupItem.border-bottom(v-for="(item, i) in cart_data"
                 :key="i"
                 :cart_item="item"
                 @removeBook="removeBook" )
-
 
 
 </template>
@@ -26,7 +27,8 @@
         data() {
             return {
                 sum: 0,
-                quantity: 0
+                quantity: 0,
+                cardOpen: false
             }
         },
         props: {
@@ -53,7 +55,7 @@
             ]),
             removeBook(data, i) {
                 this.REMOVE_BOOK(data, i)
-                console.log('REMOVE_BOOK(i)',i)
+                console.log('REMOVE_BOOK(i)', i)
             },
             getSumm() {
                 let quantity = 0
@@ -65,6 +67,9 @@
                 this.quantity = quantity
                 this.sum = sum
 
+            },
+            openCard() {
+                return this.cardOpen = !this.cardOpen
             }
         }
     }
@@ -82,17 +87,30 @@
             padding: 10px;
         }
 
-        &__popup {
-            position: absolute;
-            background: white;
-            padding: 10px;
-            box-shadow: 5px 4px 12px 1px rgba(black, .5);
-            width: 100%;
-            top: 50px;
-            z-index: 999;
-            &-content {
-                width: 100%;
+        &__basket {
+            width: 60px;
+            height: 100%;
+            .fa-layer {
+                font-size: 40px;
+            }
+            svg {
+                font-size: 45px;
+                color: $base;
+            }
+            span {
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                border-radius: 100%;
+                width: 32px;
+                height: 32px;
+                background: $accent;
+                color: white;
             }
         }
+
+
     }
 </style>

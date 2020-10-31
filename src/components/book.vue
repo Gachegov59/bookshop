@@ -1,6 +1,6 @@
 <template lang="pug">
-    .col-6.col-sm-4.col-lg-3
-        .card(:class="{_active: num != null}" :key="book_data.id")
+    .col-6.col-sm-4.col-md-3.col-lg-2
+        .card(:class="{_active: book_data.quantity > 0}" :key="book_data.id")
             img( :src="book_data.image" )
             .card__content
                 .card__title.bold(:title="book_data.title") {{ book_data.title }}
@@ -63,7 +63,7 @@
         }
 
         img {
-            height: 350px;
+            height: 250px;
             object-fit: cover;
             object-position: 0 0;
             @include tablet {
