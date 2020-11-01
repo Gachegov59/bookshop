@@ -5,7 +5,11 @@
             fa-icon(icon="shopping-cart" @click="openCard")
             span(v-if="cart_data.length") {{this.quantity}}  {{getSumm()}}
 
-        .cart__popup(:class="{_isOpen: cardOpen}")
+        .cart__popup(
+            :class="{_isOpen: cardOpen}"
+            v-if="cart_data.length"
+            )
+
             h4(v-if="cart_data.length") Итог: {{this.sum}} руб.
             cartPopupItem.border-bottom(v-for="(item, i) in cart_data"
                 :key="i"

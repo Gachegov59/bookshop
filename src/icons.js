@@ -14,7 +14,9 @@ import {
     faLongArrowAltDown,
     faLongArrowAltUp,
     faMinus,
-    faShoppingCart
+    faShoppingCart,
+    faCartArrowDown,
+    faCartPlus
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faUserSecret,
@@ -29,7 +31,10 @@ library.add(faUserSecret,
         faLongArrowAltDown,
         faLongArrowAltUp,
         faShoppingCart,
-        faMinus)
+        faMinus,
+        faCartArrowDown,
+        faCartPlus
+)
 
 Vue.component('fa-icon', FontAwesomeIcon)
 Vue.component('fa-layer', FontAwesomeLayers)
