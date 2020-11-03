@@ -8,13 +8,18 @@
         .cart__popup(
             :class="{_isOpen: cardOpen}"
             v-if="cart_data.length"
-            )
+        )
 
             h4(v-if="cart_data.length") Итог: {{this.sum}} руб.
-            cartPopupItem.border-bottom(v-for="(item, i) in cart_data"
-                :key="i"
-                :cart_item="item"
-                @removeBook="removeBook" )
+            .cart__wrap.scroll
+                cartPopupItem.border-bottom(v-for="(item, i) in cart_data"
+                    :key="i"
+                    :cart_item="item"
+                    @removeBook="removeBook" )
+            .cart__btn
+                btn.btn.btn-warning Купить
+            .cart__close( @click="openCard")
+                btn.btn.btn-danger закрыть
 
 
 </template>
@@ -22,11 +27,13 @@
 <script>
     import cartPopupItem from './cartPopupItem.vue'
     import {mapActions, mapGetters} from 'vuex'
+    import  btn from './ui/btn.vue'
 
     export default {
         name: 'cart',
         components: {
-            cartPopupItem
+            cartPopupItem,
+            btn
         },
         data() {
             return {
@@ -85,22 +92,55 @@
     .cart {
         display: flex;
         align-items: center;
-        position: relative;
 
         &__info {
             padding: 10px;
         }
+        &__btn {
+            margin-top: 20px;
+            button {
+                width: 100%;
+            }
+        }
+        &__close {
+            margin-top: 10px;
+            button {
+                width: 100%;
+            }
+        }
 
+        &__popup {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: fixed;
+            background: white;
+            box-shadow: 5px 4px 12px 1px rgba(black, .5);
+            z-index: 999;
+            visibility: hidden;
+            opacity: 0;
+            transition: all .1s ease;
+            width: 200px;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        &__wrap {
+            overflow-y: auto;
+        }
         &__basket {
             width: 60px;
             height: 100%;
+
             .fa-layer {
                 font-size: 40px;
             }
+
             svg {
                 font-size: 45px;
                 color: $base;
             }
+
             span {
                 font-size: 18px;
                 display: flex;

@@ -55,16 +55,6 @@
 
 <style lang="scss">
     .cart__popup {
-        position: absolute;
-        background: white;
-        box-shadow: 5px 4px 12px 1px rgba(black, .5);
-        top: 60px;
-        z-index: 999;
-        visibility: hidden;
-        opacity: 0;
-        transition: all .1s ease;
-        width: 200px;
-        right: 0;
 
         h4 {
             padding: 5px 10px;

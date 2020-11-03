@@ -16,3 +16,44 @@ html {
   padding: 0 15px !important;
 }
 
+.scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  //scrollbar-color:  white white ;
+  //scrollbar-width: thin;
+  &._scroll-mobile-none {
+    @include phone {
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+  }
+
+  &._scroll-mobile{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    @include phone {
+      overflow-y: auto;
+    }
+  }
+  &._vertical {
+    overflow-y: hidden;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: white;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $base;
+  }
+
+  &::-webkit-scrollbar-corner {
+    //border-radius: 7px ;
+  }
+
+}
+
