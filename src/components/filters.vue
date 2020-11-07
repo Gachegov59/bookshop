@@ -51,14 +51,15 @@
         display: flex;
         flex-grow: .5;
         padding: 0;
-        margin: 10px 0;
         list-style-type: none;
+        margin: 5px 0;
         li {
             padding-right: 5px;
         }
     }
     &__search {
         /*margin-left: 20px;*/
+        margin: 5px 0;
         flex-grow: .5;
     }
 }

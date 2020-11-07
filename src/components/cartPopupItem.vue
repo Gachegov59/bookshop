@@ -5,8 +5,10 @@
         .cart__popup-content
             .cart__popup-title  {{cart_item.title}}
             .cart__popup-author  {{cart_item.author}}
-            fa-icon(icon="ruble-sign"  style="color:grey" )
             .cart__popup-price  {{cart_item.price}}
+            .cart__popup-price
+                fa-icon(icon="ruble-sign" )
+
             .cart__popup-price <span v-show='cart_item.quantity>0' > - {{cart_item.quantity}} шт.</span>
                 fa-icon.cart__popup-delete(
                     @click="removeInCart"
@@ -71,7 +73,11 @@
         &-content {
             width: 100%;
         }
-
+        &-price {
+            svg {
+                color: $accent;
+            }
+        }
         &-item {
             display: flex;
             margin-bottom: 10px;
@@ -86,6 +92,9 @@
         &-title {
             text-overflow: ellipsis;
             overflow: hidden;
+        }
+        &-author {
+           color: gray;
         }
 
         &-content {

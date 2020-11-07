@@ -127,6 +127,7 @@
         }
         &__wrap {
             overflow-y: auto;
+            flex-grow: 1;
         }
         &__basket {
             width: 60px;

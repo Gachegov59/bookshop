@@ -1,18 +1,18 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 // import axios from "axios";
-import './bd'
+import './firebase'
 import firebase from "firebase";
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-	state: {
-		products: [],
-		cart: [],
-		cnt: 0
+    state: {
+        products: [],
+        cart: [],
+        cnt: 0
 
-	},
+    },
     mutations: {
         // Храним данные из fb
         SET_PRODUCTS_TO_STATE: (state, products) => {
@@ -54,62 +54,46 @@ export default new Vuex.Store({
                     if (state.cart[i].quantity <= 1) {
                         state.cart[i].quantity--
                         state.cart.splice(i, 1)
-                    }
-                    else {
+                    } else {
                         state.cart[i].quantity--
                     }
                 }
             }
         }
     },
-	//
-	actions: {
-		// Получаем данные axios
-		// GET_PRODUCTS_FROM_API({commit}) {
-		//     return axios('http://localhost:3000/products', {
-		//         method: "GET"
-		//     })
-		//         .then((products) => {
-		//             commit('SET_PRODUCTS_TO_STATE', products.data);
-		//
-		//             return products;
-		//         })
-		//         .catch((error) => {
-		//             console.log(error)
-		//             return error;
-		//         })
-		// },
-		// Получаем данные firebase realtime database
-		GET_PRODUCTS_FROM_FIREBASE({commit}) {
-			const bd = firebase.database();
-			const products = bd.ref('products');
-			products.on('value', (elem) => {
-				let bookData = elem.val()
-				// console.log('fb - bookData',bookData)
-				commit('SET_PRODUCTS_TO_STATE', bookData)
-			});
-		},
-		ADD_BOOK({commit}, product) {
-			commit('SET_CART', product)
-		},
-		REMOVE_BOOK({commit}, product) {
-			commit('DELETE_FROM_CART', product)
-		}
-	},
-	getters: {
-		// получаем продукты из state
-		PRODUCTS(state) {
-			return state.products
-		},
-		// получаем колличество в карзине
-		CNT(state) {
-			return state.cnt
-		},
-		// получаем массив объектов с товарами
-		CART(state) {
-			return state.cart
-		}
-	},
-	modules: {}
+    //
+    actions: {
+        // Получаем данные firebase realtime database
+        GET_PRODUCTS_FROM_FIREBASE({commit}) {
+            const bd = firebase.database();
+            const products = bd.ref('products');
+            products.on('value', (elem) => {
+                let bookData = elem.val()
+                // console.log('fb - bookData',bookData)
+                commit('SET_PRODUCTS_TO_STATE', bookData)
+            });
+        },
+        ADD_BOOK({commit}, product) {
+            commit('SET_CART', product)
+        },
+        REMOVE_BOOK({commit}, product) {
+            commit('DELETE_FROM_CART', product)
+        }
+    },
+    getters: {
+        // получаем продукты из state
+        PRODUCTS(state) {
+            return state.products
+        },
+        // получаем колличество в карзине
+        CNT(state) {
+            return state.cnt
+        },
+        // получаем массив объектов с товарами
+        CART(state) {
+            return state.cart
+        }
+    },
+    modules: {}
 
 })
