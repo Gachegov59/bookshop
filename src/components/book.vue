@@ -2,7 +2,7 @@
     .col-6.col-sm-4.col-md-3.col-lg-2
         .card(:class="{_active: book_data.quantity > 0}" :key="book_data.id")
             .card__inner
-                img( :src="book_data.image" )
+                img( :src="book_data.picture" )
                 span.card__btn-quantity(
                     v-if='book_data.quantity>0' )
                     | {{book_data.quantity}}

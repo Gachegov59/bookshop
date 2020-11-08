@@ -1,9 +1,9 @@
 <template lang="pug">
     .filters
         ul.filters__list
-            li(:title="all" @click="sort('all')"): button.btn.btn-primary Все
-            li(:title="low" @click="sort('low')"): button.btn.btn-btn-light Цена: #[fa-icon(icon="long-arrow-alt-down" )]
-            li(:title="high" @click="sort('high')"): button.btn.btn-btn-light Цена: #[fa-icon(icon="long-arrow-alt-up")]
+            li(:title="all" @click="sort('all')" :class="{_active: this.active === 'all' }"): button.btn.btn-btn-light По умолчанию
+            li(:title="low" @click="sort('low')" :class="{_active: this.active === 'low' }"): button.btn.btn-btn-light Цена: #[fa-icon(icon="long-arrow-alt-down" )]
+            li(:title="high" @click="sort('high')" :class="{_active: this.active === 'high' }"): button.btn.btn-btn-light Цена: #[fa-icon(icon="long-arrow-alt-up")]
             li: button.btn.btn-btn-light Автор
 
         .filters__search
@@ -26,6 +26,7 @@
                 low:'дешевле',
                 high:'дороже',
                 all:'всe',
+                active: 'all'
             }
         },
         components: {
@@ -34,6 +35,7 @@
         methods: {
             sort(e) {
                 this.$emit('sort', e)
+                this.active = e
             }
         }
     }
@@ -55,6 +57,11 @@
         margin: 5px 0;
         li {
             padding-right: 5px;
+            &._active {
+               button {
+                   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+               }
+            }
         }
     }
     &__search {

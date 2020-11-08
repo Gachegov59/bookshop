@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-// import axios from "axios";
+import axios from "axios";
 import './firebase'
 import firebase from "firebase";
 
@@ -14,8 +14,21 @@ export default new Vuex.Store({
 
     },
     mutations: {
-        // Храним данные из fb
+        // Храним данные из API nodeServer
         SET_PRODUCTS_TO_STATE: (state, products) => {
+            console.log('products',products)
+            let products2 = products.data.data.books.map(function (current) {
+                let book = Object.assign({}, current);
+                book.showDescription = true;
+                book.quantity = 0
+                return book;
+            });
+
+            Vue.set(products, 'q', 1)
+            state.products = products2
+        },
+        // Храним данные из fb
+        SET_PRODUCTS_TO_STATE_FIREBASE: (state, products) => {
             let products2 = products.map(function (current) {
                 let book = Object.assign({}, current);
                 book.showDescription = true;
@@ -63,6 +76,22 @@ export default new Vuex.Store({
     },
     //
     actions: {
+        // Получаем данные axios
+        GET_PRODUCTS_FROM_API({commit}) {
+            return axios('http://81.163.30.135/api/books', {
+                method: "GET"
+            })
+                    .then((products) => {
+                        console.log('axios', products.data)
+                        console.log(products)
+                        commit('SET_PRODUCTS_TO_STATE', products);
+                        return products;
+                    })
+                    .catch((error) => {
+                        console.log(error)
+                        return error;
+                    })
+        },
         // Получаем данные firebase realtime database
         GET_PRODUCTS_FROM_FIREBASE({commit}) {
             const bd = firebase.database();
@@ -70,7 +99,7 @@ export default new Vuex.Store({
             products.on('value', (elem) => {
                 let bookData = elem.val()
                 // console.log('fb - bookData',bookData)
-                commit('SET_PRODUCTS_TO_STATE', bookData)
+                commit('SET_PRODUCTS_TO_STATE_FIREBASE', bookData)
             });
         },
         ADD_BOOK({commit}, product) {

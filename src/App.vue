@@ -1,24 +1,28 @@
 <template lang="pug">
-  #app
-      AppHeader
-      AppContent
+    #app
+        router-view
+
+
 
 </template>
 
 <script>
-import AppHeader from './components/header.vue'
-import AppContent from './components/content.vue'
+    import {mapGetters} from "vuex";
+    export default {
+        name: 'App',
+        components: {
 
-export default {
-  name: 'App',
-  components: {
-      AppHeader,
-      AppContent
-  }
-}
+        },
+        computed: {
+            ...mapGetters([
+                'CART'
+            ])
+
+        }
+    }
 </script>
 
-<style lang="scss" >
+<style lang="scss">
     @import "src/styles/styles";
 
     .container {

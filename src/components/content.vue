@@ -1,15 +1,18 @@
 <template lang="pug">
-    main
-        .container.py-0
-            filters(@sort="sort")
-        .container
-            .items
-                .row
-                    book(v-for="(item, i) in filteredProduct"
-                        :key="i"
-                        :book_data="item"
-                        @addBook="addBook"
-                        @removeBook="removeBook" )
+        main
+            .container.py-0
+                filters(@sort="sort")
+            .container
+                .items
+                    .row
+                        book(v-for="(item, i) in filteredProduct"
+                            :key="i"
+                            :book_data="item"
+                            @addBook="addBook"
+                            @removeBook="removeBook" )
+
+                //AppOrder(:cart_data="CART")
+
 </template>
 
 <script>
@@ -31,7 +34,8 @@
         },
         computed: {
             ...mapGetters([
-                'PRODUCTS'
+                'PRODUCTS',
+                'CART'
             ]),
             filteredProduct() {
                 if (this.productSort.length) {
@@ -43,7 +47,8 @@
         },
         methods: {
             ...mapActions([
-                'GET_PRODUCTS_FROM_FIREBASE',
+                //'GET_PRODUCTS_FROM_FIREBASE',
+                'GET_PRODUCTS_FROM_API',
                 'ADD_BOOK',
                 'REMOVE_BOOK'
             ]),
@@ -62,7 +67,7 @@
                 if (e === 'high') {
                     this.productSort = timePRODUCTS.sort((prev, curr) => curr.price - prev.price)
                 }
-                if (e === 'all') {
+                if (e === 'standard') {
                     this.productSort = this.PRODUCTS
                 }
             }
@@ -72,7 +77,8 @@
         //     console.log('db', database);
         // }, 
         mounted() {
-            this.GET_PRODUCTS_FROM_FIREBASE() // Получаем данные для распакаовки v-for
+            //this.GET_PRODUCTS_FROM_FIREBASE() // Получаем данные для распакаовки v-for
+            this.GET_PRODUCTS_FROM_API() // Получаем данные для распакаовки v-for
             // .then((response) =>{
             //     if(response){
             //         console.log('data пришла')
