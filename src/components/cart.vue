@@ -17,6 +17,7 @@
                     :cart_item="item"
                     @removeBook="removeBook" )
             .cart__btn
+                //:todo проверить
                 router-link(:to="{name: 'order', params: {cart_data: CART}}")
                     btn.btn.btn-warning Купить
             .cart__close( @click="openCard")

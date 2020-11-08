@@ -2,23 +2,14 @@
     #app
         router-view
 
-
-
 </template>
 
 <script>
-    import {mapGetters} from "vuex";
     export default {
         name: 'App',
         components: {
 
         },
-        computed: {
-            ...mapGetters([
-                'CART'
-            ])
-
-        }
     }
 </script>
 

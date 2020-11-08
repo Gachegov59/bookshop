@@ -5,7 +5,6 @@ import './firebase'
 import firebase from "firebase";
 
 Vue.use(Vuex)
-
 export default new Vuex.Store({
     state: {
         products: [],
@@ -16,7 +15,7 @@ export default new Vuex.Store({
     mutations: {
         // Храним данные из API nodeServer
         SET_PRODUCTS_TO_STATE: (state, products) => {
-            console.log('products',products)
+            console.log('products', products)
             let products2 = products.data.data.books.map(function (current) {
                 let book = Object.assign({}, current);
                 book.showDescription = true;
@@ -104,6 +103,18 @@ export default new Vuex.Store({
         },
         ADD_BOOK({commit}, product) {
             commit('SET_CART', product)
+            console.log('addboock product', product)
+            axios('http://81.163.30.135/api/cart', {
+                method: "PUT",
+                data: {
+                    bookId: product.id,
+                    count: product.quantity
+                }
+            })
+                    .then(response => {
+                        console.log('add in cart api', response)
+                    })
+
         },
         REMOVE_BOOK({commit}, product) {
             commit('DELETE_FROM_CART', product)

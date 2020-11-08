@@ -11,7 +11,6 @@
                             @addBook="addBook"
                             @removeBook="removeBook" )
 
-                //AppOrder(:cart_data="CART")
 
 </template>
 

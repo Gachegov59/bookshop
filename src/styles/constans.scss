@@ -18,10 +18,10 @@ $grid-breakpoints: (
 );
 
 $container-max-widths: (
-        sm: 9999px,
-        md: 9999px,
-        lg: 9999px,
-        xl: 1400px
+        sm: $smart-width,
+        md: $small-desktop-width,
+        lg: $desktop-width,
+        xl: $wide-desktop-width
 );
 
 

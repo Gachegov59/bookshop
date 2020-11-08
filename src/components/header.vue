@@ -7,24 +7,42 @@
                         include ../img/logo.svg
                         .header__logo-content
                             h1.header__title <span>book</span>shop
+                                router-link(:to="{name: 'seller'}")
+                                    span.user
+                                        fa-icon(icon="user-alt"  )
                             a(href="tel:+79128888888").header__phone 8912888888
                 .header__wrap-block
-                    cart(:cart_data="CART")
+                    cart(:cart_data="CART" v-if="this.path === '/'") {{   route()}} //:todo костыль
+                    router-link(:to="{name: 'catalog'}" v-else)
+                        btn.btn.btn-warning В каталог
 
 </template>
 
 <script>
     import cart from './cart.vue'
+    import btn from '../components/ui/btn'
     import {mapGetters} from "vuex";
 
     export default {
         components: {
-            cart
+            cart,
+            btn
+        },
+        data() {
+            return {
+                path: '/'
+            }
         },
         computed: {
             ...mapGetters([
                 'CART'
             ])
+        },
+        methods: {
+            route() {
+                console.log('this.$route.path',this.$route.path)
+                this.path = this.$route.path
+            }
         }
     }
 </script>
@@ -45,12 +63,24 @@
         /*    bottom:0;*/
         /*    box-shadow: 0px 8px 4px 0px white, 1px 1px 5px white;*/
         /*}*/
+
+
         &__wrap {
             display: flex;
             justify-content: space-between;
 
             &-block {
                 display: flex;
+                cursor: pointer;
+                svg {
+                    transition: all .3s ease;
+                }
+
+                &:hover {
+                    svg {
+                        opacity: .8;
+                    }
+                }
             }
         }
 
@@ -73,6 +103,7 @@
                 }
             }
 
+
         }
 
         &__title {
@@ -92,6 +123,24 @@
 
             span {
                 color: $accent;
+            }
+
+            & .user {
+                cursor: pointer;
+
+                &:hover {
+                    svg {
+                        color: $accent;
+                    }
+                }
+
+                svg {
+                    font-size: 25px;
+                    height: auto;
+                    color: $base;
+                    cursor: pointer;
+                    transition: all .3s ease;
+                }
             }
         }
 
