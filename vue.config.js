@@ -7,5 +7,6 @@ module.exports = {
                  @import "~@/styles/constans.scss"; `
             }
         }
-    }
+    },
+    publicPath: '/bookshop/'
 };
