@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:gh-pages" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="03a5a46e-ccdf-4971-9611-cdfa1a9ff4ea" name="Default Changelist" comment="deploy| yml">
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/ajax/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/ajax/posts.json" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/posts.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/app.8acc92b6.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/app.8acc92b6.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/favicon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/favicon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/app.022ec705.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/app.022ec705.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-vendors.fccdc3ef.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/chunk-vendors.fccdc3ef.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-vendors.fccdc3ef.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/js/chunk-vendors.fccdc3ef.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ajax/data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ajax/posts.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ajax/data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ajax/posts.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/book.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cart.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cartPopupItem.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/experiments/icons.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/filters.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/btn.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/account.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/catalog.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/edditBooks.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/order.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/seller.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/router.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_icons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/constans.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/mixin.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/normalize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vuex/auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vuex/firebase.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vuex/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue.config.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="deploy" />
+                    <option name="lastUsedInstant" value="1604921425" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="dev" />
+                    <option name="lastUsedInstant" value="1604921137" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="gh-pages" />
+                    <option name="lastUsedInstant" value="1604920836" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1604920826" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="firebase" />
+                    <option name="lastUsedInstant" value="1604750092" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hAaOwxuhV4ddMKiXVHTt8iadu9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gache\Documents\GIT\bookshop" />
+      <recent name="C:\Users\gache\Documents\GIT\bookshop\src\pages" />
+      <recent name="C:\Users\gache\Documents\GIT\bookshop\src\img" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gache\Documents\GIT\bookshop\public" />
+      <recent name="C:\Users\gache\Documents\GIT\bookshop\src\img" />
+      <recent name="C:\Users\gache\Documents\GIT\bookshop\src\styles" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="03a5a46e-ccdf-4971-9611-cdfa1a9ff4ea" name="Default Changelist" comment="" />
+      <created>1599456321818</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599456321818</updated>
+      <workItem from="1599456325833" duration="18000" />
+      <workItem from="1599456355036" duration="3157000" />
+      <workItem from="1599469733686" duration="4507000" />
+      <workItem from="1599489564251" duration="57000" />
+      <workItem from="1599540106990" duration="3645000" />
+      <workItem from="1599569412220" duration="851000" />
+      <workItem from="1599626971305" duration="4000" />
+      <workItem from="1599626982212" duration="1200000" />
+      <workItem from="1599666515148" duration="29000" />
+      <workItem from="1600599881411" duration="1892000" />
+      <workItem from="1600661439762" duration="16000" />
+      <workItem from="1601367229072" duration="28000" />
+      <workItem from="1601456830240" duration="14000" />
+      <workItem from="1603522889515" duration="4832000" />
+      <workItem from="1603539467295" duration="272000" />
+      <workItem from="1603604655948" duration="12435000" />
+      <workItem from="1603634090632" duration="2440000" />
+      <workItem from="1603687944280" duration="13065000" />
+      <workItem from="1603771615194" duration="6597000" />
+      <workItem from="1603786830078" duration="14000" />
+      <workItem from="1603858027628" duration="1611000" />
+      <workItem from="1603862736983" duration="607000" />
+      <workItem from="1603946416804" duration="2045000" />
+      <workItem from="1603970019727" duration="1199000" />
+      <workItem from="1604032302134" duration="5156000" />
+      <workItem from="1604129374401" duration="12943000" />
+      <workItem from="1604208241934" duration="9066000" />
+      <workItem from="1604301040769" duration="1239000" />
+      <workItem from="1604332366752" duration="1170000" />
+      <workItem from="1604377249939" duration="5298000" />
+      <workItem from="1604422969009" duration="1285000" />
+      <workItem from="1604466946901" duration="2516000" />
+      <workItem from="1604508549772" duration="2636000" />
+      <workItem from="1604555621082" duration="602000" />
+      <workItem from="1604640729302" duration="462000" />
+      <workItem from="1604641233107" duration="222000" />
+      <workItem from="1604727234022" duration="883000" />
+      <workItem from="1604749153126" duration="9201000" />
+      <workItem from="1604817898678" duration="18018000" />
+      <workItem from="1604857912335" duration="27000" />
+      <workItem from="1604894034471" duration="3961000" />
+      <workItem from="1604916797677" duration="6406000" />
+    </task>
+    <task id="LOCAL-00001" summary="dev| fix remove add in cart, show price">
+      <created>1603702990661</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603702990661</updated>
+    </task>
+    <task id="LOCAL-00002" summary="dev| change header design + filters">
+      <created>1604155206719</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604155206719</updated>
+    </task>
+    <task id="LOCAL-00003" summary="dev| change cards style">
+      <created>1604226424056</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604226424056</updated>
+    </task>
+    <task id="LOCAL-00004" summary="dev| change cart menu">
+      <created>1604382523295</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604382523295</updated>
+    </task>
+    <task id="LOCAL-00005" summary="dev| firebase branch, before api">
+      <created>1604750129121</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604750129121</updated>
+    </task>
+    <task id="LOCAL-00006" summary="dev| add vue route, page catalog">
+      <created>1604822046065</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1604822046065</updated>
+    </task>
+    <task id="LOCAL-00007" summary="dev| add book in api catalog">
+      <created>1604857348736</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1604857348736</updated>
+    </task>
+    <task id="LOCAL-00008" summary="master| deploy config">
+      <created>1604896815083</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1604896815083</updated>
+    </task>
+    <task id="LOCAL-00009" summary="gh-pages| update build">
+      <created>1604897211163</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1604897211164</updated>
+    </task>
+    <task id="LOCAL-00010" summary="gh-pages| update build 2">
+      <created>1604897826944</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1604897826944</updated>
+    </task>
+    <task id="LOCAL-00011" summary="deploy| dist and yml">
+      <created>1604921927484</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1604921927484</updated>
+    </task>
+    <task id="LOCAL-00012" summary="deploy| yml">
+      <created>1604922015793</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1604922015793</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="gh-pages" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="dev| fix remove add in cart, show price" />
+    <MESSAGE value="dev| change header design + filters" />
+    <MESSAGE value="dev| change cards style" />
+    <MESSAGE value="dev| change cart menu" />
+    <MESSAGE value="dev| firebase branch, before api" />
+    <MESSAGE value="dev| add vue route, page catalog" />
+    <MESSAGE value="dev| add book in api catalog" />
+    <MESSAGE value="master| deploy config" />
+    <MESSAGE value="gh-pages| update build" />
+    <MESSAGE value="gh-pages| update build 2" />
+    <MESSAGE value="deploy| dist and yml" />
+    <MESSAGE value="deploy| yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="deploy| yml" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Deployment" timestamp="1604423279823">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Deployment/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604423279823" />
+    <state x="2744" y="419" key="#ESLint" timestamp="1604836425630">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2744" y="419" key="#ESLint/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604836425630" />
+    <state x="2681" y="11" key="#HTML" timestamp="1603692865648">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2681" y="11" key="#HTML/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603692865648" />
+    <state x="2880" y="147" key="#JavaScript" timestamp="1603692925210">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2880" y="147" key="#JavaScript/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603692925210" />
+    <state x="902" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604924745608">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="902" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604924745608" />
+    <state x="609" y="3" key="CommitChangelistDialog2" timestamp="1604924428340">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="609" y="3" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604924428340" />
+    <state x="2505" y="1" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604897826072" />
+    <state x="2924" y="278" key="FileChooserDialogImpl" timestamp="1604381742501">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1004" y="278" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599460666079" />
+    <state x="2924" y="278" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604381742501" />
+    <state x="2678" y="139" key="RollbackChangesDialog" timestamp="1604895873721">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2678" y="139" key="RollbackChangesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604895873721" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1604922019728">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604922019728" />
+    <state x="2472" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604897800874" />
+    <state x="-109" y="125" width="1853" height="816" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1604640901221">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-109" y="125" width="1853" height="816" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604640901221" />
+    <state x="2687" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604896664842">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2687" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604896664842" />
+    <state x="2847" y="119" width="583" height="562" key="find.popup" timestamp="1604918895130">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="788" y="128" width="583" height="562" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603523860804" />
+    <state x="2847" y="119" width="583" height="562" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604918895130" />
+    <state x="2645" y="151" key="git4idea.branch.GitSmartOperationDialog" timestamp="1604896582557">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2645" y="151" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604896582557" />
+    <state x="2793" y="305" key="git4idea.merge.GitMergeDialog" timestamp="1604918755756">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2793" y="305" key="git4idea.merge.GitMergeDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604918755756" />
+    <state x="2642" y="306" key="git4idea.ui.GitUnstashDialog" timestamp="1604896619731">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2642" y="306" key="git4idea.ui.GitUnstashDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604896619731" />
+    <state x="2335" y="244" key="run.anything.popup" timestamp="1604839254567">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2335" y="244" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604839254567" />
+    <state x="2796" y="230" key="search.everywhere.popup" timestamp="1604641129471">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2796" y="230" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604641129471" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/cart.vue</url>
+          <line>29</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
