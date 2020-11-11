@@ -26,58 +26,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03a5a46e-ccdf-4971-9611-cdfa1a9ff4ea" name="Default Changelist" comment="deploy| yml">
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/ajax/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/ajax/posts.json" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/posts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/app.8acc92b6.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/app.8acc92b6.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/favicon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/favicon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/app.022ec705.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/app.022ec705.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/chunk-vendors.fccdc3ef.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/chunk-vendors.fccdc3ef.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/chunk-vendors.fccdc3ef.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/js/chunk-vendors.fccdc3ef.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/ajax/data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/ajax/posts.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ajax/data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ajax/posts.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/book.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cart.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cartPopupItem.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/experiments/icons.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/filters.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/btn.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/icons.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/account.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/catalog.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/edditBooks.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/order.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/seller.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/router.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_icons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/constans.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/mixin.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/normalize.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/styles.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vuex/auth.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vuex/firebase.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vuex/store.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue.config.js" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/app.5a24bfa9.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/app.965dfec7.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/app.965dfec7.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/chunk-vendors.151b8081.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/chunk-vendors.151b8081.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +103,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -162,15 +117,16 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gache\Documents\GIT\bookshop" />
+      <recent name="C:\Users\gache\Documents\GIT\bookshop\public" />
+      <recent name="C:\Users\gache\Documents\GIT\bookshop\src\img" />
+      <recent name="C:\Users\gache\Documents\GIT\bookshop\src\styles" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\gache\Documents\GIT\bookshop" />
       <recent name="C:\Users\gache\Documents\GIT\bookshop\src\pages" />
       <recent name="C:\Users\gache\Documents\GIT\bookshop\src\img" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\gache\Documents\GIT\bookshop\public" />
-      <recent name="C:\Users\gache\Documents\GIT\bookshop\src\img" />
-      <recent name="C:\Users\gache\Documents\GIT\bookshop\src\styles" />
     </key>
   </component>
   <component name="SvnConfiguration">
