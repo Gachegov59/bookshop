@@ -4,11 +4,11 @@
             li(:title="all" @click="sort('all')" :class="{_active: this.active === 'all' }"): button.btn.btn-btn-light По умолчанию
             li(:title="low" @click="sort('low')" :class="{_active: this.active === 'low' }"): button.btn.btn-btn-light Цена: #[fa-icon(icon="long-arrow-alt-down" )]
             li(:title="high" @click="sort('high')" :class="{_active: this.active === 'high' }"): button.btn.btn-btn-light Цена: #[fa-icon(icon="long-arrow-alt-up")]
-            li: button.btn.btn-btn-light Автор
+            //li: button.btn.btn-btn-light Автор
 
         .filters__search
             .input-group
-                input.form-control(type='text',  placeholder="Введите запрос" aria-label='Amount (to the nearest dollar)')
+                input.form-control(type='text',  placeholder="Введите название.." aria-label='Amount (to the nearest dollar)')
                 .input-group-append
                     span.input-group-text
                         fa-icon(icon="search")
@@ -49,6 +49,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-bottom: 10px;
     &__list {
         display: flex;
         flex-grow: .5;
@@ -62,12 +63,24 @@
                    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
                }
             }
+            svg {
+                transition: all .3s ease;
+            }
+            &:hover {
+                svg {
+                    color: $accent;
+                }
+            }
         }
+
     }
     &__search {
         /*margin-left: 20px;*/
         margin: 5px 0;
         flex-grow: .5;
+        input {
+            font-size: 16px;
+        }
     }
 }
 </style>

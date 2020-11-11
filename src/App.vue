@@ -1,14 +1,16 @@
 <template lang="pug">
     #app
-        router-view
+        keep-alive
+            router-view
 
 </template>
 
 <script>
+    import notifications from 'vue-notification'
     export default {
         name: 'App',
         components: {
-
+            notifications
         },
     }
 </script>

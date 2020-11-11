@@ -10,18 +10,21 @@
             v-if="cart_data.length"
         )
 
-            h4(v-if="cart_data.length") Итог: {{this.sum}} руб.
+            //h4(v-if="cart_data.length") Итог: {{this.sum}} руб.
             .cart__wrap.scroll
                 cartPopupItem.border-bottom(v-for="(item, i) in cart_data"
                     :key="i"
                     :cart_item="item"
-                    @removeBook="removeBook" )
-            .cart__btn
-                //:todo проверить
-                router-link(:to="{name: 'order', params: {cart_data: CART}}")
-                    btn.btn.btn-warning Купить
-            .cart__close( @click="openCard")
-                btn.btn.btn-danger закрыть
+                    @removeBook="removeBook",
+                    @addBook="addBook" )
+            .cart__btns
+                .cart__btn
+                    //:todo проверить params in router-link
+                    router-link(:to="{name: 'order', params: {cart_data: CART}}")
+                        btn.btn._btn-outline Купить:  <span class="cart__price"> {{this.sum}} </span>
+                         fa-icon(icon="ruble-sign")
+                .cart__close( @click="openCard")
+                    btn.btn._btn-outline  Закрыть
 
 
 </template>
@@ -68,7 +71,11 @@
             ]),
             removeBook(data, i) {
                 this.REMOVE_BOOK(data, i)
-                console.log('REMOVE_BOOK(i)', i)
+                // console.log('REMOVE_BOOK(i)', i)
+            },
+            addBook(data, i) {
+                this.ADD_BOOK(data, i)
+                // console.log('REMOVE_BOOK(i)', i)
             },
             getSumm() {
                 let quantity = 0
@@ -98,17 +105,18 @@
         &__info {
             padding: 10px;
         }
-        &__btn {
-            margin-top: 20px;
+        &__btns {
+            padding: 0 10px 10px;
             button {
                 width: 100%;
+                font-size: 16px;
             }
+        }
+        &__btn {
+            margin-top: 20px;
         }
         &__close {
             margin-top: 10px;
-            button {
-                width: 100%;
-            }
         }
 
         &__popup {
@@ -130,6 +138,9 @@
         &__wrap {
             overflow-y: auto;
             flex-grow: 1;
+        }
+        &__controls {
+            margin-top: auto;
         }
         &__basket {
             width: 60px;

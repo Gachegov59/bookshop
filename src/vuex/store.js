@@ -84,7 +84,9 @@ export default new Vuex.Store({
                         console.log('axios', products.data)
                         console.log(products)
                         commit('SET_PRODUCTS_TO_STATE', products);
+
                         return products;
+
                     })
                     .catch((error) => {
                         console.log(error)
@@ -104,16 +106,16 @@ export default new Vuex.Store({
         ADD_BOOK({commit}, product) {
             commit('SET_CART', product)
             console.log('addboock product', product)
-            axios('http://81.163.30.135/api/cart', {
-                method: "PUT",
-                data: {
-                    bookId: product.id,
-                    count: product.quantity
-                }
-            })
-                    .then(response => {
-                        console.log('add in cart api', response)
-                    })
+            // axios('http://81.163.30.135/api/cart', {
+            //     method: "PUT",
+            //     data: {
+            //         bookId: product.id,
+            //         count: product.quantity
+            //     }
+            // })
+            //         .then(response => {
+            //             console.log('add in cart api', response)
+            //         })
 
         },
         REMOVE_BOOK({commit}, product) {

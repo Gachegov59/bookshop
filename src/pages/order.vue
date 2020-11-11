@@ -1,13 +1,15 @@
 <template lang="pug">
     .container
-        h4(v-if="cart_data.length") Итог: {{this.sum}} руб.
-        .cart__wrap.scroll
-            cartPopupItem.border-bottom(v-for="(item, i) in cart_data"
-                :key="i"
-                :cart_item="item"
-                @removeBook="removeBook" )
-        router-link(:to="{name: 'catalog'}")
-            btn.btn.btn-warning Назад
+        .row
+            .col-12.col-md-8
+                h4(v-if="cart_data.length") Итог: {{this.sum}} руб.
+                .cart__wrap._order
+                    cartPopupItem.border-bottom(v-for="(item, i) in cart_data"
+                        :key="i"
+                        :cart_item="item"
+                        @removeBook="removeBook" )
+                router-link(:to="{name: 'catalog'}")
+                    btn.btn.btn-warning Назад
 </template>
 
 <script>
@@ -23,7 +25,8 @@
         },
         data() {
             return {
-
+                sum: 0,
+                quantity: 0,
             }
         },
         props: {

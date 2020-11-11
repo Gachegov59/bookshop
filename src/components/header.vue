@@ -4,17 +4,17 @@
             .header__wrap
                 .header__wrap-block
                     .header__logo
-                        include ../img/logo.svg
+                        router-link(:to="{name: 'catalog'}" )
+                            include ../img/logo.svg
                         .header__logo-content
                             h1.header__title <span>book</span>shop
                                 router-link(:to="{name: 'seller'}")
                                     span.user
                                         fa-icon(icon="user-alt"  )
                             a(href="tel:+79128888888").header__phone 8912888888
-                .header__wrap-block
-                    cart(:cart_data="CART" v-if="this.path === '/'") {{   route()}} //:todo костыль
-                    router-link(:to="{name: 'catalog'}" v-else)
-                        btn.btn.btn-warning В каталог
+                .header__wrap-block {{route()}}
+                    cart(:cart_data="CART" v-show="this.path === '/bookshop' || this.path === '/'")
+
 
 </template>
 
@@ -30,7 +30,7 @@
         },
         data() {
             return {
-                path: '/'
+                path: '/bookshop/'
             }
         },
         computed: {
@@ -40,7 +40,6 @@
         },
         methods: {
             route() {
-                console.log('this.$route.path',this.$route.path)
                 this.path = this.$route.path
             }
         }

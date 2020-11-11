@@ -2,6 +2,7 @@
         main
             .container.py-0
                 filters(@sort="sort")
+
             .container
                 .items
                     .row
@@ -66,7 +67,7 @@
                 if (e === 'high') {
                     this.productSort = timePRODUCTS.sort((prev, curr) => curr.price - prev.price)
                 }
-                if (e === 'standard') {
+                if (e === 'all') {
                     this.productSort = this.PRODUCTS
                 }
             }
@@ -78,11 +79,17 @@
         mounted() {
             //this.GET_PRODUCTS_FROM_FIREBASE() // Получаем данные для распакаовки v-for
             this.GET_PRODUCTS_FROM_API() // Получаем данные для распакаовки v-for
-            // .then((response) =>{
-            //     if(response){
-            //         console.log('data пришла')
-            //     }
-            // })
+            .then((response) =>{
+                if(response){
+                    console.log('data пришла')
+
+                    this.$notify({
+                        group: 'foo',
+                        title: 'Login failed',
+                        text: 'Please try again or contact us',
+                    });
+                }
+            })
 
         }
 

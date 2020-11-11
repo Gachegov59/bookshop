@@ -1,0 +1,29 @@
+.btn {
+  font-size: 16px;
+  color: black;
+  &._btn-outline {
+    background: $white;
+    border: 1px solid $base;
+    border-radius: 5px;
+
+    .fa-ruble-sign {
+      color: $accent;
+    }
+
+    &:hover {
+      background: $base;
+      color: $white;
+    }
+  }
+
+  &._btn-close {
+    background: $accent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    &:hover {
+      background: $base;
+      color: $white;
+    }
+  }
+}

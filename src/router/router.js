@@ -1,14 +1,15 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+import VueRouter from 'vue-router'
 import catalog from '../pages/catalog.vue'
 import order from '../pages/order.vue'
 import seller from '../pages/seller.vue'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-let router = new Router({
+const router = new VueRouter({
+    mode: 'history',
     routes: [
-        {path: '/', name: 'catalog', component: catalog},
+        {path: '/bookshop/', name: 'catalog', component: catalog},
         {path: '/order', name: 'order', component: order, props: true},
         {path: '/seller', name: 'seller', component: seller}
     ]

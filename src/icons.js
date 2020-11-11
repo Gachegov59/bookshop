@@ -14,6 +14,7 @@ import {
     faLongArrowAltDown,
     faLongArrowAltUp,
     faMinus,
+    faPlus,
     faShoppingCart,
     faCartArrowDown,
     faCartPlus,
@@ -35,7 +36,8 @@ library.add(faUserSecret,
         faMinus,
         faCartArrowDown,
         faCartPlus,
-        faUserAlt
+        faUserAlt,
+        faPlus
 )
 
 Vue.component('fa-icon', FontAwesomeIcon)

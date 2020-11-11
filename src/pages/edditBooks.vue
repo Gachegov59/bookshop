@@ -1,12 +1,11 @@
 <template lang="pug">
     .container
-        h2.mt-5 Добовление книг
+        h2.mt-2 Добовление книг
         .row
             .col-8
-
                 template
                     div
-                        b-form()
+                        b-form
                             b-form-group#input-group-1(label="Название книги:")
                                 b-form-input#input-1(v-model="title")
                             b-form-group#input-group-1(label="Автор:")
@@ -15,22 +14,9 @@
                                 b-form-input#input-1(v-model="url")
                             b-form-group#input-group-1(label="цена:")
                                 b-form-input#input-1(v-model="price")
-                            b-button(type='submit' variant='primary' @click='addbookAPI') Submit
-                            b-button(type='reset' variant='danger') Reset
-        //div
-                    b-form-group#input-group-2(label='Your Name:' label-for='input-2')
-                        b-form-input#input-2(v-model='form.name' required='' placeholder='Enter name')
-                    b-form-group#input-group-3(label='Food:' label-for='input-3')
-                        b-form-select#input-3(v-model='form.food' :options='foods' required='')
-                    b-form-group#input-group-4
-                        b-form-checkbox-group#checkboxes-4(v-model='form.checked')
-                            b-form-checkbox(value='me') Check me out
-                            b-form-checkbox(value='that') Check that out
-                    b-button(type='submit' variant='primary') Submit
-                    b-button(type='reset' variant='danger') Reset
-                    b-card.mt-3(header='Form Data Result')
-                        pre.m-0.
-                            \n{{ form }}
+                            div.pb-2
+                                b-button.btn._btn-outline.mr-2(type='submit' variant='primary' @click='addbookAPI') Submit
+                                b-button.btn._btn-close(type='reset' variant='danger') Reset
 
 </template>
 
