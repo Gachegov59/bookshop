@@ -41,6 +41,7 @@
         methods: {
             route() {
                 this.path = this.$route.path
+                console.log(this.$route.path)
             }
         }
     }
