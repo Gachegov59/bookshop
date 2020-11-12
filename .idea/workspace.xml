@@ -25,14 +25,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03a5a46e-ccdf-4971-9611-cdfa1a9ff4ea" name="Default Changelist" comment="deploy| yml">
-      <change afterPath="$PROJECT_DIR$/css/app.5a24bfa9.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/app.965dfec7.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/app.965dfec7.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/chunk-vendors.151b8081.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/chunk-vendors.151b8081.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="8c40bbac-e061-4c7f-b2d2-a0c0e100a76e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/css/app.5a24bfa9.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/chunk-vendors.f1e2857d.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/chunk-vendors.f1e2857d.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
