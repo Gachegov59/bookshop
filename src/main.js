@@ -5,10 +5,8 @@ import router from './router/router'
 import './icons.js'
 import { BootstrapVue} from 'bootstrap-vue' //:todo оставить нужное
 import VueAxios from 'vue-axios'
-import Notifications from 'vue-notification'
-Vue.prototype.$notify = Notification;
-// import velocity      from 'velocity-animate'
-Vue.use(BootstrapVue, VueAxios, Notifications)
+
+Vue.use(BootstrapVue, VueAxios)
 
 
 new Vue({

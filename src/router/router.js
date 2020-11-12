@@ -9,7 +9,7 @@ Vue.use(VueRouter)
 const router = new VueRouter({
     mode: 'history',
     routes: [
-        {path: '/bookshop/', name: 'catalog', component: catalog},
+        {path: '/', name: 'catalog', component: catalog},
         {path: '/order', name: 'order', component: order, props: true},
         {path: '/seller', name: 'seller', component: seller}
     ]

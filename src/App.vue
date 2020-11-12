@@ -6,11 +6,10 @@
 </template>
 
 <script>
-    import notifications from 'vue-notification'
     export default {
         name: 'App',
         components: {
-            notifications
+            
         },
     }
 </script>

@@ -65,7 +65,7 @@
 
 <style lang="scss">
     .cart__popup {
-
+        padding-bottom: 10px;
         h4 {
             padding: 5px 10px;
             font-size: 22px;

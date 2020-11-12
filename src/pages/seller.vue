@@ -10,13 +10,16 @@
 <script>
     import AppHeader from '../components/header.vue'
     import AppContent from "../components/content";
+    import btn from "../components/ui/btn";
     import pageEdditBooks from "../pages/edditBooks";
+
     export default {
         name: "seller",
         components: {
             AppHeader,
             AppContent,
-            pageEdditBooks
+            pageEdditBooks,
+            btn
         }
     }
 </script>

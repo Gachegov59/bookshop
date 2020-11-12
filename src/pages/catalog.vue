@@ -2,12 +2,14 @@
     div
         AppHeader
         AppContent
+        //AppFooter
 
 </template>
 
 <script>
     import AppHeader from '../components/header.vue'
     import AppContent from '../components/content.vue'
+    import AppFooter from '../components/footer.vue'
     export default {
         name: "catalog",
         data() {
@@ -17,7 +19,8 @@
         },
         components: {
             AppHeader,
-            AppContent
+            AppContent,
+            AppFooter
         }
     }
 </script>

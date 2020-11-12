@@ -106,7 +106,7 @@
             padding: 10px;
         }
         &__btns {
-            padding: 0 10px 10px;
+            padding: 0 10px;
             button {
                 width: 100%;
                 font-size: 16px;

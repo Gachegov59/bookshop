@@ -9,7 +9,7 @@
                         :cart_item="item"
                         @removeBook="removeBook" )
                 router-link(:to="{name: 'catalog'}")
-                    btn.btn.btn-warning Назад
+                    btn.btn._btn-outline.mt-2 Назад
 </template>
 
 <script>

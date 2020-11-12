@@ -12,16 +12,16 @@
                             @addBook="addBook"
                             @removeBook="removeBook" )
 
+                //button(@click="showToast") Show toast
 
 </template>
 
 <script>
+    import notification from '../plugins/vue-notification'
     import book from './book'
     import filters from './filters.vue'
     import {mapActions, mapGetters} from 'vuex'
     // import firebase from "firebase";
-    // import  db from "../vuex/db"
-
     export default {
         data() {
             return {
@@ -30,7 +30,8 @@
         },
         components: {
             book,
-            filters
+            filters,
+            notification
         },
         computed: {
             ...mapGetters([
@@ -70,6 +71,9 @@
                 if (e === 'all') {
                     this.productSort = this.PRODUCTS
                 }
+            },
+               showToast() {
+                this.$notify({ group: 'foo', text: 'Wrong password, please try again later' })
             }
         },
         // created() {
@@ -82,12 +86,12 @@
             .then((response) =>{
                 if(response){
                     console.log('data пришла')
-
-                    this.$notify({
-                        group: 'foo',
-                        title: 'Login failed',
-                        text: 'Please try again or contact us',
-                    });
+                    // this._vm.$toast.success('data пришла: ')
+                    // this.$notify({
+                    //     group: 'foo',
+                    //     title: 'Login failed',
+                    //     text: 'Please try again or contact us',
+                    // });
                 }
             })
 
@@ -99,5 +103,7 @@
 </script>
 
 <style lang="scss">
-
+.items {
+    padding-bottom: 20px;
+}
 </style>

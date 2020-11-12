@@ -84,7 +84,7 @@ export default new Vuex.Store({
                         console.log('axios', products.data)
                         console.log(products)
                         commit('SET_PRODUCTS_TO_STATE', products);
-
+                        
                         return products;
 
                     })
