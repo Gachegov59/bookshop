@@ -26,7 +26,7 @@
         background: $base;
         padding: 20px 0;
         color: white;
-        min-height: 50px;
+        /*min-height: 50px;*/
         &__copyright {
             display: flex;
             &-item {
