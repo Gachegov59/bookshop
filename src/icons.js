@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import {library} from '@fortawesome/fontawesome-svg-core'
-import {FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome'
+import {FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText} from '@fortawesome/vue-fontawesome'
+
 import {
     faUserSecret,
     faSpinner,
@@ -18,9 +19,10 @@ import {
     faShoppingCart,
     faCartArrowDown,
     faCartPlus,
-    faUserAlt,
-    // faVuejs
+    faUserAlt
 } from '@fortawesome/free-solid-svg-icons'
+
+import {faNode,faTwitter, faVuejs} from '@fortawesome/free-brands-svg-icons'
 
 library.add(faUserSecret,
         faSpinner,
@@ -39,7 +41,9 @@ library.add(faUserSecret,
         faCartPlus,
         faUserAlt,
         faPlus,
-        // faVuejs
+        faNode,
+        faTwitter,
+        faVuejs
 )
 
 Vue.component('fa-icon', FontAwesomeIcon)

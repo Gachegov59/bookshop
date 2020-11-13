@@ -13,7 +13,7 @@
                                         fa-icon(icon="user-alt"  )
                             a(href="tel:+79128888888").header__phone 8912888888
                 .header__wrap-block {{route()}}
-                    cart(:cart_data="CART" v-show="this.path === '/bookshop' || this.path === '/'")
+                    cart(:cart_data="CART" v-show="this.path === '/vue/' || this.path === '/'")
 
 
 </template>
@@ -30,7 +30,7 @@
         },
         data() {
             return {
-                path: '/bookshop/'
+                path: '/vue/'
             }
         },
         computed: {

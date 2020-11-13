@@ -25,12 +25,13 @@
                          fa-icon(icon="ruble-sign")
                 .cart__close( @click="openCard")
                     btn.btn._btn-outline  Закрыть
-
+                example
 
 </template>
 
 <script>
     import cartPopupItem from './cartPopupItem.vue'
+    import example from '../components/popup/popupOrder'
     import {mapActions, mapGetters} from 'vuex'
     import  btn from './ui/btn.vue'
 
@@ -38,7 +39,8 @@
         name: 'cart',
         components: {
             cartPopupItem,
-            btn
+            btn,
+            example
         },
         data() {
             return {
@@ -89,7 +91,9 @@
 
             },
             openCard() {
+                // this.$modal.show('example');
                 return this.cardOpen = !this.cardOpen
+
             }
         }
     }

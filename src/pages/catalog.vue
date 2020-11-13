@@ -1,8 +1,8 @@
 <template lang="pug">
-    div
+    ._flex-wrap
         AppHeader
         AppContent
-        //AppFooter
+        AppFooter
 
 </template>
 
@@ -10,6 +10,7 @@
     import AppHeader from '../components/header.vue'
     import AppContent from '../components/content.vue'
     import AppFooter from '../components/footer.vue'
+    import { Fragment } from 'vue-fragment'
     export default {
         name: "catalog",
         data() {
@@ -20,7 +21,8 @@
         components: {
             AppHeader,
             AppContent,
-            AppFooter
+            AppFooter,
+            Fragment
         }
     }
 </script>

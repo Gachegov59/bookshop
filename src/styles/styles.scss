@@ -10,11 +10,23 @@
 html {
   font-size: 10px;
   color: white;
+  height: 100%;
   @include tablet {
     font-size: 12px;
   }
 }
+body, #app {
+  height: 100%;
+}
 
+._flex-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  main {
+    flex-grow: 1;
+  }
+}
 .container {
   padding: 0 15px !important;
 }
