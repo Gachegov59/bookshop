@@ -8,7 +8,7 @@ module.exports = {
             }
         }
     },
-    publicPath: '/vue/',
+    publicPath: '/vue/dist/',
     chainWebpack: config => {
         config.plugin('html').tap((args) => {
             args[0].minify = {

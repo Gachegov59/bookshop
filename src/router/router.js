@@ -11,9 +11,9 @@ const router = new VueRouter({
     mode: 'history',
     routes: [
         { path: '*', component: not404 },
-        {path: '/vue/', name: 'catalog', component: catalog},
-        {path: '/vue/order', name: 'order', component: order, props: true},
-        {path: '/vue/seller', name: 'seller', component: seller}
+        {path: '/vue/dist/', name: 'catalog', component: catalog},
+        {path: '/vue/dist/order', name: 'order', component: order, props: true},
+        {path: '/vue/dist/seller', name: 'seller', component: seller}
     ]
 })
 
