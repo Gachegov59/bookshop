@@ -22,7 +22,7 @@ jobs:
       - run: echo "${{ secrets.key }}" > "$HOME/.ssh/key"
       - run: chmod 600 "$HOME/.ssh/key"
       # Build
-       - run: npm ci
+#       - run: npm ci
 #       - run: npm run build
 #      # Deploy
 #      # - run: ssh -p22 root@81.163.30.135 "cd /var/www/nodejs/ && npm i && npm update && npm run build"
