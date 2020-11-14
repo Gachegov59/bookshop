@@ -1,36 +1,36 @@
 <template lang="pug">
-    .col-6.col-sm-4.col-md-3.col-lg-2
-        .card(:class="{_active: book_data.quantity > 0}" :key="book_data.id")
-            .card__inner
-                img( :src="book_data.picture" )
-                span.card__btn-quantity(
-                    v-if='book_data.quantity>0' )
-                    | {{book_data.quantity}}
-                .card__btn(:class='{_show: book_data.quantity > 0}')
+    //.col-6.col-sm-4.col-md-3.col-lg-2
+    .card(:class="{_active: book_data.quantity > 0}" :key="book_data.id")
+        .card__inner
+            img( :src="book_data.picture" )
+            span.card__btn-quantity(
+                v-if='book_data.quantity>0' )
+                | {{book_data.quantity}}
+            .card__btn(:class='{_show: book_data.quantity > 0}')
 
-                    .card__btn-block(v-if="book_data.quantity>0")
-                        span.card__btn-remove
-                            fa-icon(
-                                @click="removeInCart"
-                                icon="minus"
-                                v-if="book_data.quantity")
-                    .card__btn-block
-                        span.card__btn-add(v-if="book_data.quantity<1")
-                            fa-icon(
-                                icon="cart-arrow-down"
-                                @click="addInCart"
-                            )
-                        span.card__btn-add(v-else)
-                            fa-icon(
-                                icon="cart-plus"
-                                @click="addInCart"
-                            )
-            .card__content
-                .card__title(:title="book_data.title") {{ book_data.title }}
-                .card__author(:title="book_data.author") {{ book_data.author }}
-            .card__price
-                .fa.fa-rub {{ book_data.price }}
-                fa-icon(icon="ruble-sign" ).ml-1
+                .card__btn-block(v-if="book_data.quantity>0")
+                    span.card__btn-remove
+                        fa-icon(
+                            @click="removeInCart"
+                            icon="minus"
+                            v-if="book_data.quantity")
+                .card__btn-block
+                    span.card__btn-add(v-if="book_data.quantity<1")
+                        fa-icon(
+                            icon="cart-arrow-down"
+                            @click="addInCart"
+                        )
+                    span.card__btn-add(v-else)
+                        fa-icon(
+                            icon="cart-plus"
+                            @click="addInCart"
+                        )
+        .card__content
+            .card__title(:title="book_data.title") {{ book_data.title }}
+            .card__author(:title="book_data.author") {{ book_data.author }}
+        .card__price
+            .fa.fa-rub {{ book_data.price }}
+            fa-icon(icon="ruble-sign" ).ml-1
 
 </template>
 
@@ -71,10 +71,23 @@
 
 <style lang="scss" scoped>
     .card {
-        margin-bottom: 20px;
+        flex: 0 0 calc(100% / 6 - 20px);
+        margin: 0 10px;
         box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.175);
         overflow: hidden;
         border: none;
+        @include small-desktop {
+            flex: 0 0 calc(100% / 5 - 20px);
+        }
+        @include tablet {
+            flex: 0 0 calc(100% / 4 - 20px);
+        }
+        @include phone {
+            flex: 0 0 calc(100% / 3 - 20px);
+        }
+        @include mobile {
+            flex: 0 0 calc(100% / 2 - 20px);
+        }
 
         &:hover {
             .card__btn {

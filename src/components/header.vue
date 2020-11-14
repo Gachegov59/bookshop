@@ -1,5 +1,5 @@
 <template lang="pug">
-    header.header
+    header.header(@scroll="letsScroll = true" :class="letsScroll && '_scrolled'")
         .container
             .header__wrap
                 .header__wrap-block
@@ -41,7 +41,7 @@
         methods: {
             route() {
                 this.path = this.$route.path
-                console.log(this.$route.path)
+                // console.log(this.$route.path)
             }
         }
     }
@@ -55,6 +55,7 @@
         top: 0;
         background: white;
         z-index: 10;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.20);
         /*&:after {*/
         /*    content: '';*/
         /*    position: absolute;*/

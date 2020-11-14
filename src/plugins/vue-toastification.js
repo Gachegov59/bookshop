@@ -18,3 +18,4 @@ Vue.use(Toast, {
     icon: true,
     rtl: false,
 })
+

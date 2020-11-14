@@ -1,26 +1,24 @@
 <template lang="pug">
-        main
-            .container.py-0
-                filters(@sort="sort")
-
-            .container
-                .items
-                    .row
-                        book(v-for="(item, i) in filteredProduct"
-                            :key="i"
-                            :book_data="item"
-                            @addBook="addBook"
-                            @removeBook="removeBook" )
-
-                //button(@click="showToast") Show toast
-
+    main
+        .container.py-0
+            filters(@sort="sort")
+        .container
+            .items
+                book(v-for="(item, i) in filteredProduct"
+                    :key="i"
+                    :book_data="item"
+                    @addBook="addBook"
+                    @removeBook="removeBook" )
+        //toastification(group="foo")
 </template>
 
 <script>
-    import notification from '../plugins/vue-notification'
+    // import notification from '../plugins/vue-notification'
     import book from './book'
     import filters from './filters.vue'
     import {mapActions, mapGetters} from 'vuex'
+    import axios from "axios";
+    import toastification from "../plugins/vue-toastification";
     // import firebase from "firebase";
     export default {
         data() {
@@ -31,7 +29,7 @@
         components: {
             book,
             filters,
-            notification
+            toastification
         },
         computed: {
             ...mapGetters([
@@ -55,6 +53,37 @@
             ]),
             addBook(data, i) {
                 this.ADD_BOOK(data, i)
+
+                axios('http://81.163.30.135/api/cart', {
+                    method: "PUT",
+                    body: {
+                        bookId: data.id,
+                        count: data.quantity
+                    }
+                })
+                        .then(response => {
+                            if (response.status === 200) {
+                                this.$toast.warning(response.data.message, {
+                                    icon: "cart-plus",
+                                });
+                            } else {
+                                this.$toast.success(response.data.message, {
+                                    icon: "cart-plus",
+                                });
+                            }
+                            console.log(response)
+                        })
+                        .catch((error) => {
+                            console.log('error', error)
+                        if (error.response) {
+                            // this.$toast.error(error, {
+                            //     icon: "cart-plus",
+                            // });
+                        }
+
+                            return error;
+                        })
+
             },
             removeBook(data, id) {
                 this.REMOVE_BOOK(data, id)
@@ -85,7 +114,7 @@
             this.GET_PRODUCTS_FROM_API() // Получаем данные для распакаовки v-for
             .then((response) =>{
                 if(response){
-                    console.log('data пришла')
+                    // console.log('data пришла')
                     // this._vm.$toast.success('data пришла: ')
                     // this.$notify({
                     //     group: 'foo',
@@ -105,5 +134,8 @@
 <style lang="scss">
 .items {
     padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
 }
 </style>

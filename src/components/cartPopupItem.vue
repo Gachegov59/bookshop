@@ -24,7 +24,7 @@
 
 <script>
     // import {mapGetters} from 'vuex'
-
+    // import toastification from '../plugins/vue-toastification'
     export default {
         name: 'cartPopupItem',
         components: {},

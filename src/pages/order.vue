@@ -1,20 +1,21 @@
 <template lang="pug">
     .container
-        .row
+        .row.mt-2
             .col-12.col-md-8
-                h4(v-if="cart_data.length") Итог: {{this.sum}} руб.
+                h2(v-if="cart_data.length") Итог: {{this.sum}} руб.  {{getSumm()}}
                 .cart__wrap._order
                     cartPopupItem.border-bottom(v-for="(item, i) in cart_data"
                         :key="i"
                         :cart_item="item"
-                        @removeBook="removeBook" )
+                        @removeBook="removeBook",
+                        @addBook="addBook" )
                 router-link(:to="{name: 'catalog'}")
                     btn.btn._btn-outline.mt-2 Назад
 </template>
 
 <script>
     import cartPopupItem from '../components/cartPopupItem';
-    import {mapActions} from "vuex";
+    import {mapActions, mapGetters} from "vuex";
     // import  btn from './ui/btn.vue'
     import  btn from '../components/ui/btn.vue'
     export default {
@@ -37,6 +38,12 @@
                 }
             }
         },
+        computed: {
+        ...mapGetters([
+            // 'CART',
+            'CART'
+        ])
+        },
         methods: {
             ...mapActions([
                 'ADD_BOOK',
@@ -45,6 +52,10 @@
             removeBook(data, i) {
                 this.REMOVE_BOOK(data, i)
                 console.log('REMOVE_BOOK(i)', i)
+            },
+            addBook(data, i) {
+                this.ADD_BOOK(data, i)
+                // console.log('REMOVE_BOOK(i)', i)
             },
             getSumm() {
                 let quantity = 0
