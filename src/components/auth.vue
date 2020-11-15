@@ -30,7 +30,7 @@
             authAPI() {
                 axios('http://81.163.30.135/api/auth/register/', {
                     method: "POST",
-                    body: {
+                    data: {
                         email: this.email,
                         password: this.password,
                         passwordConfirm: this.passwordConfirm,
