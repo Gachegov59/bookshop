@@ -55,7 +55,7 @@
                 console.log(data.id)
                 console.log(data.quantity)
 
-                axios('http://81.163.30.135/api/cart/', {
+                axios('http://81.163.30.135/api/cart', {
                     method: "PUT",
                     body: {
                         bookId: data.id,

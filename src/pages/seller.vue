@@ -4,7 +4,9 @@
         .container.mt-2
             router-link(:to="{name: 'catalog'}" )
                 btn.btn._btn-outline В каталог
+        auth
         pageEdditBooks
+
 </template>
 
 <script>
@@ -12,6 +14,7 @@
     import AppContent from "../components/content";
     import btn from "../components/ui/btn";
     import pageEdditBooks from "../pages/edditBooks";
+    import auth from "../components/auth";
 
     export default {
         name: "seller",
@@ -19,7 +22,8 @@
             AppHeader,
             AppContent,
             pageEdditBooks,
-            btn
+            btn,
+            auth
         }
     }
 </script>
