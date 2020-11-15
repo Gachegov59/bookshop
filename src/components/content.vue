@@ -57,20 +57,20 @@
 
                 axios('http://81.163.30.135/api/cart', {
                     method: "PUT",
-                    body: {
+                    data: {
                         bookId: data.id,
                         count: data.quantity
                     }
                 })
                         .then(response => {
                             if (response.status === 200) {
-                                this.$toast.warning(response.data.message, {
-                                    icon: "cart-plus",
-                                });
+                                // this.$toast.warning(response.data.message, {
+                                //     icon: "cart-plus",
+                                // });
                             } else {
-                                this.$toast.success(response.data.message, {
-                                    icon: "cart-plus",
-                                });
+                                // this.$toast.success(response.data.message, {
+                                //     icon: "cart-plus",
+                                // });
                             }
                             console.log(response)
                         })
