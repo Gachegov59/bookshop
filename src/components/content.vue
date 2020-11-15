@@ -13,12 +13,11 @@
 </template>
 
 <script>
-    // import notification from '../plugins/vue-notification'
     import book from './book'
     import filters from './filters.vue'
     import {mapActions, mapGetters} from 'vuex'
     import axios from "axios";
-    import toastification from "../plugins/vue-toastification";
+    // import toastification from "../plugins/vue-toastification";
     // import firebase from "firebase";
     export default {
         data() {
@@ -29,7 +28,7 @@
         components: {
             book,
             filters,
-            toastification
+            // toastification
         },
         computed: {
             ...mapGetters([
@@ -53,8 +52,10 @@
             ]),
             addBook(data, i) {
                 this.ADD_BOOK(data, i)
+                console.log(data.id)
+                console.log(data.quantity)
 
-                axios('http://81.163.30.135/api/cart', {
+                axios('http://81.163.30.135/api/cart/', {
                     method: "PUT",
                     body: {
                         bookId: data.id,
@@ -100,9 +101,6 @@
                 if (e === 'all') {
                     this.productSort = this.PRODUCTS
                 }
-            },
-               showToast() {
-                this.$notify({ group: 'foo', text: 'Wrong password, please try again later' })
             }
         },
         // created() {
@@ -115,13 +113,11 @@
             .then((response) =>{
                 if(response){
                     // console.log('data пришла')
-                    // this._vm.$toast.success('data пришла: ')
-                    // this.$notify({
-                    //     group: 'foo',
-                    //     title: 'Login failed',
-                    //     text: 'Please try again or contact us',
-                    // });
                 }
+                axios.get('http://81.163.30.135/api/cart')
+                .then((response) => {
+                    console.log('карзина', response.data)
+                })
             })
 
         }

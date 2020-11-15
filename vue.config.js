@@ -20,5 +20,15 @@ module.exports = {
             }
             return args
         })
-    }
+    },
+
+    // configureWebpack: {
+    //     plugins: [
+    //         // {src: "@/plugins/vue-swiper.js", ssr: false},
+    //         // '~plugins/vue-js-modal.js',
+    //         // '~plugins/vue-bootstrap',
+    //         // {src: '~plugins/leaflet', mode: 'client'},
+    //         {src: '~plugins/vue-toastification.js'},
+    //     ]
+    // }
 };

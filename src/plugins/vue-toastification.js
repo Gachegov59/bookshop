@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Toast from "vue-toastification";
 
-Vue.use(Toast, {
+const ToastOptions = {
     transition: "Vue-Toastification__bounce",
     maxToasts: 3,
     newestOnTop: true,
@@ -17,5 +17,6 @@ Vue.use(Toast, {
     closeButton: "button",
     icon: true,
     rtl: false,
-})
+}
+Vue.use(Toast, ToastOptions)
 

@@ -1,5 +1,5 @@
 <template lang="pug">
-    header.header(@scroll="letsScroll = true" :class="letsScroll && '_scrolled'")
+    header.header(v-scroll="getscroll" :class="{_active: this.headerScroll}")
         .container
             .header__wrap
                 .header__wrap-block
@@ -22,7 +22,18 @@
     import cart from './cart.vue'
     import btn from '../components/ui/btn'
     import {mapGetters} from "vuex";
+    import Vue from 'vue'
 
+    Vue.directive('scroll', {
+        inserted: function (el, binding) {
+            let f = function (evt) {
+                if (binding.value(evt, el)) {
+                    window.removeEventListener('scroll', f)
+                }
+            }
+            window.addEventListener('scroll', f)
+        }
+    })
     export default {
         components: {
             cart,
@@ -30,7 +41,8 @@
         },
         data() {
             return {
-                path: '/vue/'
+                path: '/vue/',
+                headerScroll: false
             }
         },
         computed: {
@@ -42,8 +54,14 @@
             route() {
                 this.path = this.$route.path
                 // console.log(this.$route.path)
+            },
+            getscroll(e) {
+                let headerActive = this.headerScroll
+                headerActive = e.target.documentElement.scrollTop > 2;
+                 this.headerScroll = headerActive
             }
         }
+
     }
 </script>
 
@@ -55,16 +73,12 @@
         top: 0;
         background: white;
         z-index: 10;
-        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.20);
-        /*&:after {*/
-        /*    content: '';*/
-        /*    position: absolute;*/
-        /*    width: 100%;*/
-        /*    height: 10px;*/
-        /*    bottom:0;*/
-        /*    box-shadow: 0px 8px 4px 0px white, 1px 1px 5px white;*/
-        /*}*/
 
+        &._active {
+           // border-bottom: 1px solid $accent;
+            transition: all .3s ease;
+            box-shadow: 0 8px 6px -6px black;
+        }
 
         &__wrap {
             display: flex;
@@ -73,6 +87,7 @@
             &-block {
                 display: flex;
                 cursor: pointer;
+
                 svg {
                     transition: all .3s ease;
                 }
@@ -95,7 +110,7 @@
             }
 
             svg {
-                height: 60px;
+                height: 55px;
                 width: 80px;
                 margin-right: 5px;
                 @include tablet {

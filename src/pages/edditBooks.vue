@@ -7,10 +7,10 @@
 
                     template
                         .accordion(role='tablist')
-                            b-card.mb-1(no-body='')
+                            b-card.mb-1(no-body='' close)
                                 b-card-header.p-1(header-tag='header' role='tab')
-                                    b-button(block='' v-b-toggle.accordion-1='' ) Добавить книгу
-                                b-collapse#accordion-1(visible='' accordion='my-accordion' role='tabpanel')
+                                    b-button.collapsed(block='' v-b-toggle.accordion-1='' ) Добавить книгу
+                                b-collapse#accordion-1(visible='' accordion='my-accordion' role='tabpanel' :visible="false")
                                     b-card-body
                                         b-card-text
                                             template
@@ -54,7 +54,7 @@
 
 <script>
     import axios from "axios";
-    import toastification from '../plugins/vue-toastification'
+    // import toastification from '../plugins/vue-toastification'
     import AppFooter from "../components/footer";
 
     export default {
@@ -71,7 +71,7 @@
             }
         },
         components: {
-            toastification,
+            // toastification,
             AppFooter
         },
         methods: {
@@ -128,7 +128,7 @@
                             return error;
                         })
             }
-        }
+        },
     }
 </script>
 

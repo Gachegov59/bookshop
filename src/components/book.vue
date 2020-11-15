@@ -72,7 +72,7 @@
 <style lang="scss" scoped>
     .card {
         flex: 0 0 calc(100% / 6 - 20px);
-        margin: 0 10px;
+        margin: 10px;
         box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.175);
         overflow: hidden;
         border: none;
