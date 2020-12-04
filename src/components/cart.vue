@@ -2,7 +2,7 @@
 
     .cart
         fa-layer.cart__basket
-            fa-icon(icon="shopping-cart" @click="openCard")
+            fa-icon(icon="shopping-cart" @click="openCard") 
             span(v-if="cart_data.length") {{this.quantity}}  {{getSumm()}}
 
         .cart__popup(
@@ -64,7 +64,9 @@
             ]),
             log() {
                 return console.log('log', this.$store.state.cartArr)
-            }
+            },
+            // eslint-disable-next-line vue/return-in-computed-property
+
         },
         methods: {
             ...mapActions([
@@ -94,6 +96,16 @@
                 // this.$modal.show('example');
                 return this.cardOpen = !this.cardOpen
 
+            }
+        },
+        watch: {
+            cartOpen() {
+                console.log('rtr')
+                if(this.cart_data.length < 1 ) {
+
+                    // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+                    return  this.cardOpen = false;
+                }
             }
         }
     }

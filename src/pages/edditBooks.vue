@@ -3,8 +3,7 @@
         .container
             h2.mt-2 Книги
             .row.mt-4
-                .col-12.col-md-8
-
+                .col-12.col-md-10.col-lg-7
                     template
                         .accordion(role='tablist')
                             b-card.mb-1(no-body='' close)
@@ -15,15 +14,15 @@
                                         b-card-text
                                             template
                                                 b-form.form(v-on:submit.prevent)
-                                                    b-form-group#fieldset-horizontal(label-cols-sm='3' label-cols-lg='3' label='Название книги' label-for='title' v-model="title")
-                                                        b-form-input#title(v-model="title")
-                                                    b-form-group#fieldset-horizontal(label-cols-sm='3' label-cols-lg='3' label='Автор' label-for='author' v-model="author")
-                                                        b-form-input#author(v-model="author")
-                                                    b-form-group#fieldset-horizontal(label-cols-sm='3' label-cols-lg='3' label='Цена' label-for='price' v-model="price")
-                                                        b-form-input#price(v-model="price")
+                                                    b-form-group#fieldset-horizontal(label-cols-sm='2' label-cols-lg='3' label='Название ' label-for='title' v-model="title" )
+                                                        b-form-input#title(v-model="title" placeholder="Введите название книги..")
+                                                    b-form-group#fieldset-horizontal(label-cols-sm='2' label-cols-lg='3' label='Автор' label-for='author' v-model="author")
+                                                        b-form-input#author(v-model="author" placeholder="Введите автора..")
+                                                    b-form-group#fieldset-horizontal(label-cols-sm='2' label-cols-lg='3' label='Цена' label-for='price' v-model="price")
+                                                        b-form-input#price(v-model="price" placeholder="Введите цену..")
                                                     b-form-group
-                                                        b-form-group#fieldset-horizontal(label-cols-sm='3' label-cols-lg='3' label='Путь картинки:' label-for='url' v-model="url")
-                                                            b-form-input#url(v-model="url")
+                                                        b-form-group#fieldset-horizontal(label-cols-sm='2' label-cols-lg='3' label='Путь картинки:' label-for='url' v-model="url")
+                                                            b-form-input#url(v-model="url" placeholder="Название книги")
                                                         template
                                                             div
                                                                 .row
@@ -42,8 +41,8 @@
                                     b-card-body
                                         b-card-text
                                             b-form.form(v-on:submit.prevent)
-                                                b-form-group#fieldset-horizontal(label-cols-sm='3' label-cols-lg='3' label='ID книги' label-for='title' v-model="title")
-                                                    b-form-input#title(v-model="id")
+                                                b-form-group#fieldset-horizontal(label-cols-sm='3' label-cols-lg='3' label='ID книги' label-for='id' v-model="title")
+                                                    b-form-input#id(v-model="id")
                                                     div.mt-2
                                                         b-button.btn._btn-outline.mr-2(type='submit' variant='primary' @click='deleteBoock') Submit
                                                         b-button.btn._btn-close(type='reset' variant='danger') Reset

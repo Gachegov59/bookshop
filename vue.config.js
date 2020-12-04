@@ -21,7 +21,9 @@ module.exports = {
             return args
         })
     },
-
+    devServer: {
+        proxy: 'http://81.163.30.135'
+    }
     // configureWebpack: {
     //     plugins: [
     //         // {src: "@/plugins/vue-swiper.js", ssr: false},
