@@ -4,25 +4,25 @@
             .col-12.col-md-8
                 h2(v-if="cart_data.length") Итог: {{this.sum}} руб.  {{getSumm()}}
                 .cart__wrap._order
-                    cartPopupItem.border-bottom(v-for="(item, i) in cart_data"
+                    AppCartItem.border-bottom(v-for="(item, i) in cart_data"
                         :key="i"
                         :cart_item="item"
                         @removeBook="removeBook",
                         @addBook="addBook" )
-                router-link(:to="{name: 'catalog'}")
-                    btn.btn._btn-outline.mt-2 Назад
+                router-link(:to="{name: 'home'}")
+                    BaseButton.btn._btn-outline.mt-2 Назад
 </template>
 
 <script>
-    import cartPopupItem from '../components/cartPopupItem';
+    import AppCartItem from '../components/AppCartItem';
     import {mapActions, mapGetters} from "vuex";
-    // import  btn from './ui/btn.vue'
-    import  btn from '../components/ui/btn.vue'
+    // import  btn from './ui/BaseButton.vue'
+    import  BaseButton from '../components/ui/BaseButton.vue'
     export default {
-        name: "order",
+        name: "PageOrder",
         components: {
-            cartPopupItem,
-            btn
+            AppCartItem,
+            BaseButton
         },
         data() {
             return {

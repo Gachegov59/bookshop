@@ -1,27 +1,27 @@
 <template lang="pug">
     ._flex-wrap
-        AppHeader
+        TheHeader
         AppContent
-        AppFooter
+        TheFooter
 
 </template>
 
 <script>
-    import AppHeader from '../components/header.vue'
-    import AppContent from '../components/content.vue'
-    import AppFooter from '../components/footer.vue'
+    import TheHeader from '../components/TheHeader.vue'
+    import AppContent from '../components/AppContent.vue'
+    import TheFooter from '../components/TheFooter.vue'
     import { Fragment } from 'vue-fragment'
     export default {
-        name: "catalog",
+        name: "pageHome",
         data() {
             return{
 
             }
         },
         components: {
-            AppHeader,
+            TheHeader,
             AppContent,
-            AppFooter,
+            TheFooter,
             Fragment
         }
     }

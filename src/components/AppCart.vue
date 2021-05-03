@@ -2,45 +2,23 @@
 
     .cart
         fa-layer.cart__basket
-            fa-icon(icon="shopping-cart" @click="openCard") 
+            fa-icon(icon="shopping-cart" @click="openCard")
             span(v-if="cart_data.length") {{this.quantity}}  {{getSumm()}}
+            p корзина
 
-        .cart__popup(
-            :class="{_isOpen: cardOpen}"
-            v-if="cart_data.length"
-        )
-
-            //h4(v-if="cart_data.length") Итог: {{this.sum}} руб.
-            .cart__wrap.scroll
-                cartPopupItem.border-bottom(v-for="(item, i) in cart_data"
-                    :key="i"
-                    :cart_item="item"
-                    @removeBook="removeBook",
-                    @addBook="addBook" )
-            .cart__btns
-                .cart__btn
-                    //:todo проверить params in router-link
-                    router-link(:to="{name: 'order', params: {cart_data: CART}}")
-                        btn.btn._btn-outline Купить:  <span class="cart__price"> {{this.sum}} </span>
-                         fa-icon(icon="ruble-sign")
-                .cart__close( @click="openCard")
-                    btn.btn._btn-outline  Закрыть
-                example
 
 </template>
 
 <script>
-    import cartPopupItem from './cartPopupItem.vue'
-    import example from '../components/popup/popupOrder'
+    import AppCartItem from './AppCartItem.vue'
     import {mapActions, mapGetters} from 'vuex'
-    import  btn from './ui/btn.vue'
+    import  BaseButton from './ui/BaseButton.vue'
 
     export default {
         name: 'cart',
         components: {
-            cartPopupItem,
-            btn,
-            example
+            AppCartItem,
+            BaseButton,
         },
         data() {
             return {
@@ -93,9 +71,7 @@
 
             },
             openCard() {
-                // this.$modal.show('example');
                 return this.cardOpen = !this.cardOpen
-
             }
         },
         watch: {
@@ -157,32 +133,6 @@
         }
         &__controls {
             margin-top: auto;
-        }
-        &__basket {
-            width: 60px;
-            height: 100%;
-
-            .fa-layer {
-                font-size: 40px;
-            }
-
-            svg {
-                font-size: 45px;
-                color: $base;
-            }
-
-            span {
-                font-size: 18px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: absolute;
-                border-radius: 100%;
-                width: 32px;
-                height: 32px;
-                background: $accent;
-                color: white;
-            }
         }
 
 

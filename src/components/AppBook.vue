@@ -76,6 +76,8 @@
         box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.175);
         overflow: hidden;
         border: none;
+        font-family: $RobotoCondensed;
+        font-weight: 300;
         @include small-desktop {
             flex: 0 0 calc(100% / 5 - 20px);
         }
@@ -100,7 +102,7 @@
         }
 
         img {
-            height: 250px;
+            height: 240px;
             object-fit: cover;
             object-position: 0 0;
             @include tablet {
@@ -211,6 +213,7 @@
             text-overflow: ellipsis;
             overflow: hidden;
             color: gray;
+            font-size: 1.5rem;
         }
 
         &__button {

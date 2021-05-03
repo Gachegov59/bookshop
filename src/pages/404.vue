@@ -1,7 +1,7 @@
 <template lang="pug">
     .container
         .page-home
-            router-link(:to="{name: 'catalog'}" )
+            router-link(:to="{name: 'home'}" )
                 include ../img/logo.svg
         .page-not
             h1 4<span>0</span>4

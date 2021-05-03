@@ -1,15 +1,15 @@
 import Vue from 'vue'
 import App from './App.vue'
-import store from './vuex/store'
-import router from './router/router'
-import './icons.js'
+import store from './store'
+import router from './router'
+import './plugins/fontawesome'
 import '../src/plugins/vue-toastification'
+import '../src/plugins/vue-js-modal'
 import Fragment from 'vue-fragment'
 import VueAxios from 'vue-axios'
-import VModal from 'vue-js-modal'
 import { BootstrapVue} from 'bootstrap-vue' //:todo оставить нужное
 
-Vue.use(BootstrapVue, VueAxios, Fragment,VModal)
+Vue.use(BootstrapVue, VueAxios, Fragment)
 new Vue({
     store,
     router,

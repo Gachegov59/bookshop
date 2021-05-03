@@ -12,7 +12,7 @@
     border: 1px solid $base;
     border-radius: 5px;
 
-    .fa-ruble-sign {
+    .fa-ruble-sign { // FIXME: dfs
       color: $accent;
     }
 
@@ -24,6 +24,7 @@
 
   &._btn-close {
     background: $accent;
+    color: $white;
     border: 1px solid transparent;
     border-radius: 5px;
 

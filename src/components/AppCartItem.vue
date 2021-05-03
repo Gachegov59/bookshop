@@ -25,7 +25,7 @@
 <script>
     // import {mapGetters} from 'vuex'
     export default {
-        name: 'cartPopupItem',
+        name: 'AppCartItem',
         components: {},
         data() {
             return {}

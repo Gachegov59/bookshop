@@ -1,10 +1,10 @@
 <template lang="pug">
     .filters
         ul.filters__list
-            li(:title="all" @click="sort('all')" :class="{_active: this.active === 'all' }"): button.btn.btn-btn-light По умолчанию
-            li(:title="low" @click="sort('low')" :class="{_active: this.active === 'low' }"): button.btn.btn-btn-light Цена: #[fa-icon(icon="long-arrow-alt-down" )]
-            li(:title="high" @click="sort('high')" :class="{_active: this.active === 'high' }"): button.btn.btn-btn-light Цена: #[fa-icon(icon="long-arrow-alt-up")]
-            //li: button.btn.btn-btn-light Автор
+            li: button.btn.btn-btn-light(:title="all" @click="sort('all')" ) сброс
+            li: button.btn.btn-btn-light(:title="low" @click="sort('low')" :class="{_active: this.active === 'low' }"): fa-icon(icon="sort-amount-down-alt" )
+            li: button.btn.btn-btn-light(:title="high" @click="sort('high')" :class="{_active: this.active === 'high' }"): fa-icon(icon="sort-amount-down" )
+            li: button.btn.btn-btn-light: fa-icon(icon="filter")
 
         .filters__search
             .input-group
@@ -12,19 +12,15 @@
                 .input-group-append
                     span.input-group-text
                         fa-icon(icon="search")
-
-
 </template>
 
 <script>
-
-
     export default {
-        name: 'filters',
+        name: 'AppFilters',
         data(){
             return{
-                low:'дешевле',
-                high:'дороже',
+                low:'по возростанию',
+                high:'по убыванию',
                 all:'всe',
                 active: 'all'
             }
@@ -58,9 +54,10 @@
         margin: 5px 0;
         li {
             padding-right: 5px;
-            &._active {
-               button {
-                   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+            button{
+               &._active{
+                   //box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+                   color: $base;
                }
             }
             svg {
