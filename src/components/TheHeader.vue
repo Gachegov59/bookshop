@@ -4,25 +4,25 @@
             .header__wrap
                 .header__item
                     .header__logo
-                        router-link(:to="{name: 'home'}" )
+                        router-link(:to="{name: 'PageHome'}" )
                             include ../img/logo.svg
                     .header__info
                         h1.header__title <span>book</span>shop
                         a(href="tel:+79128888888").header__phone 8912888888
-
+                        a().header__phone  {{setUser}}
 
                 nav.header__nav {{route()}}
-                    .header__nav-item(@click="openPopupRegister")
-                        fa-icon(icon="user-alt"  )
-                        span Профиль
-
-                    .header__nav-item(@click="openPopupAuth")
+                    .header__nav-item(@click="openPopupAuth" v-show="!this.user")
                         //router-link(:to="{name: 'seller'}")
                         fa-icon(icon="user-alt"  )
                         span Вход
+                    .header__nav-item(@click="userExit" v-show="this.user")
+                        //router-link(:to="{name: 'seller'}")
+                        fa-icon(icon="user-alt"  )
+                        span Выход
 
                     .header__nav-item
-                        fa-icon(icon="shopping-cart" @click="openCard" cart_data="CART"  v-show="this.path === '/vue/' || this.path === '/vue' || this.path === '/'")
+                        fa-icon(icon="shopping-cart" @click="openCard" cart_data="CART"  v-show="this.path === '/bookshop/' || this.path === '/bookshop' || this.path === '/'")
                             //span(v-if="cart_data.length") {{this.quantity}}  {{getSumm()}}
                         span Корзина
 
@@ -34,10 +34,14 @@
 <script>
 // import AppCart from './AppCart'
 import BaseButton from '../components/ui/BaseButton'
-import {mapGetters} from "vuex";
+import {mapActions, mapGetters} from "vuex";
 import Vue from 'vue'
 import popupRegister from '../components/popup/popupRegister'
 import popupAuth from '../components/popup/popupAuth'
+// eslint-disable-next-line no-unused-vars
+import axios from "axios";
+// eslint-disable-next-line no-unused-vars
+import config from "@/config";
 
 Vue.directive('scroll', {
     inserted: function (el, binding) {
@@ -52,7 +56,6 @@ Vue.directive('scroll', {
 export default {
     name: "TheHeader",
     components: {
-        // AppCart,
         BaseButton,
         popupRegister,
         popupAuth
@@ -60,28 +63,34 @@ export default {
 
     data() {
         return {
-            path: '/vue/',
-            headerScroll: false
+            path: '/bookshop/',
+            headerScroll: false,
+            user: ''
         }
     },
     computed: {
         ...mapGetters([
-            'CART'
-        ])
+            'CART',
+            'USER'
+        ]),
+        setUser(){
+            // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+            return this.user = this.USER
+        }
     },
-
     methods: {
-        openPopupRegister() {
-            this.$modal.show('popupRegister');
-            console.log(123)
-        },
+        ...mapActions([
+            'EXIT_USER',
+            'GET_USER'
+        ]),
         openPopupAuth() {
             this.$modal.show('popupAuth');
-            console.log(123)
+        },
+        userExit() {
+            this.EXIT_USER()
         },
         route() {
             this.path = this.$route.path
-            // console.log(this.$route.path)
         },
         getScroll(e) {
             let headerActive = this.headerScroll
@@ -91,9 +100,16 @@ export default {
         openCard() {
             return this.cardOpen = !this.cardOpen
         }
-
     },
-
+    mounted() {
+       this.GET_USER()
+        // .then((data) => {
+        //     console.log(data)
+        // })
+    },
+    // mounted() {
+    //       return this.user = this.USER
+    // }
 
 }
 </script>
@@ -139,6 +155,7 @@ export default {
             font-size: 1.2rem;
             line-height: 2rem;
         }
+
         &:hover {
             svg {
                 color: $accent;

@@ -11,9 +11,9 @@ const router = new VueRouter({
     mode: 'history',
     routes: [
         { path: '*', component: notPages },
-        {path: '/vue/', name: 'PageHome', component: PageHome},
-        {path: '/vue/order', name: 'PageOrder', component: PageOrder, props: true},
-        {path: '/vue/seller', name: 'PageSeller', component: PageSeller}
+        {path: '/bookshop', name: 'PageHome', component: PageHome},
+        {path: '/bookshop/order', name: 'PageOrder', component: PageOrder, props: true},
+        {path: '/bookshop/seller', name: 'PageSeller', component: PageSeller}
     ]
 })
 

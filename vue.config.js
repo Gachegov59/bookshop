@@ -10,8 +10,8 @@ module.exports = {
     },
     // publicPath: '/vue/',
     publicPath: process.env.NODE_ENV === 'production'
-            ? '/vue/dist/'
-            : '/vue/',
+            ? '/bookshop/dist/'
+            : '/bookshop/',
     chainWebpack: config => {
         config.plugin('html').tap((args) => {
             args[0].minify = {
@@ -22,7 +22,8 @@ module.exports = {
         })
     },
     devServer: {
-        proxy: 'http://81.163.30.135'
+        // proxy: 'http://81.163.30.135'
+        proxy: 'http://94.228.114.120'
     }
     // configureWebpack: {
     //     plugins: [

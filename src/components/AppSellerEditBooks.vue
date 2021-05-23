@@ -49,7 +49,7 @@
     import axios from "axios";
     // import toastification from '../plugins/vue-toastification'
     import TheFooter from "./TheFooter";
-
+    import config from '../config.js'
     export default {
         name: "PageSellerEditBooks",
         data() {
@@ -69,7 +69,7 @@
         },
         methods: {
             addbookAPI() {
-                axios('http://81.163.30.135/api/books', {
+                axios(`http://${config.api.new}/api/books`, {
                     method: "POST",
                     data: {
                         title: this.title,
@@ -100,7 +100,7 @@
 
             },
             deleteBoock() {
-                axios.delete(`http://81.163.30.135/api/books/${this.id}`)
+                axios.delete(`http://${config.api.new}/api/books/${this.id}`)
                         .then(response => {
                             if (response.status === 200) {
                                 this.$toast.warning(response.data.message, {

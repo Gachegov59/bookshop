@@ -9,6 +9,7 @@
                     :book_data="item"
                     @addBook="addBook"
                     @removeBook="removeBook" )
+
         //toastification(group="foo")
 </template>
 
@@ -17,6 +18,7 @@ import AppBook from './AppBook'
 import AppFilters from './AppFilters.vue'
 import {mapActions, mapGetters} from 'vuex'
 import axios from "axios";
+import config from '../config.js'
 // import toastification from "../plugins/vue-toastification";
 // import firebase from "firebase";
 export default {
@@ -46,17 +48,18 @@ export default {
     },
     methods: {
         ...mapActions([
-            //'GET_PRODUCTS_FROM_FIREBASE',
             'GET_PRODUCTS_FROM_API',
             'ADD_BOOK',
-            'REMOVE_BOOK'
+            'REMOVE_BOOK',
+            'GET_USER'
         ]),
+
         addBook(data, i) {
             this.ADD_BOOK(data, i)
-            console.log(data.id)
-            console.log(data.quantity)
+            // console.log(data.id)
+            // console.log(data.quantity)
 
-            axios('http://81.163.30.135/api/cart', {
+            axios(`http://${config.api.new}/api/cart`, {
                 method: "PUT",
                 data: {
                     bookId: data.id,
@@ -65,6 +68,7 @@ export default {
             })
                 .then(response => {
                     if (response.status === 200) {
+                        // console.log(response)
                         // this.$toast.warning(response.data.message, {
                         //     icon: "cart-plus",
                         // });
@@ -73,7 +77,7 @@ export default {
                         //     icon: "cart-plus",
                         // });
                     }
-                    console.log(response)
+                    // console.log(response)
                 })
                 .catch((error) => {
                     console.log('error', error)
@@ -104,22 +108,14 @@ export default {
             }
         }
     },
-    // created() {
-    //     var database = firebase.database();
-    //     console.log('db', database);
-    // },
+
     mounted() {
-        //this.GET_PRODUCTS_FROM_FIREBASE() // Получаем данные для распакаовки v-for
         this.GET_PRODUCTS_FROM_API() // Получаем данные для распакаовки v-for
-            .then((response) => {
-                if (response) {
-                    // console.log('data пришла')
-                }
-                axios.get('http://81.163.30.135/api/cart')
-                    .then((response) => {
-                        console.log('карзина', response.data)
-                    })
-            })
+            // .then((response) => {
+            //     // if (response) {
+            //     //     console.log('this.GET_PRODUCTS_FROM_API', response)
+            //     // }
+            // })
     }
 
 }
